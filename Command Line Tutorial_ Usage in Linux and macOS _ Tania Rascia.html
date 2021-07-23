@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)https://www.taniarascia.com/how-to-use-the-command-line-for-apple-macos-and-linux/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style data-href="/styles.05c4730e74aba2b9b67a.css" id="gatsby-global-css">@import url(https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap);@import url(https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap);
+/*! Tania Rascia's website style. Written with plain CSS in one file. Why not? */:root{--font-color:#495057;--heading-color:#343a40;--background:#fff;--dark-font-color:#1b1d25;--medium-font-color:#60656c;--light-font-color:#858b93;--light-background:#f1f4f8;--light-background-hover:#e1e6ed;--border:#d6d9de;--link-color:#5183f5;--link-color-darker:#364fc7;--navbar-color:#1b1d25;--blockquote:#edf2ff;--transparent-text:rgba(0,0,0,0.7);--transparent-bg:rgba(0,0,0,0.05);--light-transparent-bg:hsla(0,0%,100%,0.1);--font-family:"DM Sans",-apple-system,BlinkMacSystemFont,"Helvetica Neue","Roboto",Roboto,Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--heading-font-family:"DM Mono",Menlo,monospace;--code-font-family:Menlo,"Roboto Mono",Courier New,monospace;--border-color:var(--dark-font-color);--yellow:#fedc47;--yellow-orange:#fdba3a;--orange:#fd9830;--red-orange:#fd7727;--subtle-border:rgba(0,0,0,0.1)}*,:after,:before{box-sizing:border-box}html{font-family:var(--font-family);color:var(--font-color);font-weight:400;font-size:1rem;line-height:1.75}body{background:var(--background);margin:0;padding:0}time{font-family:var(--code-font-family);-webkit-font-smoothing:subpixel-antialiased}section{margin:2rem 0}section>h2{display:flex;align-items:center;font-size:1.5rem;margin-top:0;margin-bottom:.5rem}@media screen and (min-width:800px){section>h2{margin-bottom:2rem;font-size:2rem}}.index h2,section>h2{border-bottom-width:3px}h2.section-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;font-size:1.3rem}a.section-button{background:var(--light-background);color:var(--dark-font-color);padding:.6rem;font-size:.9rem;white-space:nowrap;line-height:1;margin-left:2rem;margin-top:.5rem;font-family:var(--heading-font-family);font-weight:400;letter-spacing:0;border:1px solid var(--subtle-border)!important}a.section-button:hover{background:var(--light-background-hover);color:var(--heading-color)}.paragraph{max-width:750px}@media screen and (min-width:800px){section{margin:3.5rem 0}h2.section-title{font-size:2rem;margin:0 0 1.5rem}a.section-button{font-size:1rem}}.container{max-width:950px;padding:0 1.5rem;margin-left:auto;margin-right:auto}.page section:first-of-type{margin-top:1.5rem}.page img{margin-top:1rem}@media screen and (min-width:800px){.container{padding:0 2rem}.page section:first-of-type{margin-top:3rem}}img{display:inline-block;max-width:100%;height:auto}a.link-image,a.link-image:hover{border-bottom-color:transparent}blockquote,dl,ol,p,table,ul{font-size:1.05rem;margin:0 0 1.5rem}ul{padding:0 1rem}@media screen and (min-width:800px){blockquote,dl,ol,p,table,ul{font-size:1.25rem}ul{padding:0 2rem}table{margin-bottom:2rem}}ul li p{margin:0 0 .2rem}ul li{padding-bottom:.3rem}ul li ul{padding-left:1rem;margin:0}ul li ul li{margin:0}ol li ol{margin-bottom:0}.task-list-item [type=checkbox]{margin-right:.5rem}blockquote{margin:2rem 0;padding:1rem;background:var(--blockquote);font-weight:400;border-left:3px solid var(--link-color)}blockquote p{max-width:100%!important}blockquote :last-child{margin:0}blockquote :not(pre)>code[class*=language-]{background:rgba(0,0,0,.1)!important}blockquote.quotation{margin:2rem 0;padding:0;border-radius:0;border:none;background:transparent}blockquote.quotation p{font-family:"DM Serif",Georgia,serif;line-height:1.6;color:var(--medium-font-color);font-size:1.2rem;margin:0 0 2rem}@media screen and (min-width:800px){blockquote{padding:2rem}blockquote.quotation{margin:2.5rem 0;overflow:auto}blockquote.quotation cite{float:right;font-size:1.5rem}blockquote.quotation p{font-size:1.4rem}}h1,h2,h3,h4,h5{margin:0 0 1.5rem;font-weight:700;line-height:1.2;color:var(--heading-color);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}h1:not(:first-child),h2:not(:first-child),h3:not(:first-child),h4:not(:first-child){margin-top:3rem}h1{font-size:1.7rem;line-height:1.1;letter-spacing:-.15rem}h1,h2{font-family:var(--heading-font-family);-webkit-font-smoothing:subpixel-antialiased}h2{font-size:1.6rem;padding-bottom:.5rem;border-bottom:3px solid var(--border-color);letter-spacing:-.1rem}h2 code{font-size:1.75rem!important}h3{font-size:1.5rem;color:var(--font-color);font-weight:600;margin-bottom:1rem;text-decoration:underline}h3 code{font-size:1.4rem!important}h4{font-size:1.3rem;color:var(--font-color);font-weight:500;border-bottom:3px solid var(--border-color);padding-bottom:.25rem}h4,h5{margin-bottom:1rem}h5{font-size:1.2rem}@media screen and (min-width:800px){h1{font-size:3rem}h1,h2{letter-spacing:-.1rem}h2{font-size:2.2rem}h2 code{font-size:1.9rem!important}h3{font-size:1.8rem;color:var(--font-color);font-weight:600}h3 code{font-size:1.6rem!important}h4{font-weight:600;font-size:1.5rem}}.blurb{background:var(--light-background);border-top:1px solid var(--subtle-border);border-bottom:1px solid var(--subtle-border);padding:2.5rem 0}.blurb p{font-size:1.2rem}.blurb p:last-of-type{margin-bottom:.5rem}.avatar,.blurb a.button{display:block}.avatar{max-height:200px;margin:1.5rem auto 0;border:3px solid var(--border-color)}@media screen and (min-width:650px){.blurb a.button{display:inline-block}}@media screen and (min-width:800px){.blurb{padding:3rem 0}.blurb p{max-width:750px;font-size:1.4rem;line-height:1.6}.blurb h1{font-size:2.75rem;margin-bottom:2rem}.blurb .container{display:flex;justify-content:space-between;align-items:center}.avatar{margin-top:0;max-height:none;max-width:350px;margin-left:2rem}}a.link{display:block;padding:.25rem 0;margin:.25rem 0;border-radius:.35rem;font-weight:600;color:var(--dark-font-color)}a.link:hover{color:var(--link-color)}a.button{display:inline-block;border:3px solid var(--border-color);padding:.5rem .75rem;font-weight:500;background:var(--link-color);color:#fff;font-size:.95rem;font-family:var(--heading-font-family);margin:0 .25rem .5rem;line-height:1.3;border-radius:0;box-shadow:5px 5px var(--border-color);text-align:center}a.button:hover{border:3px solid var(--border-color);background:var(--link-color-darker);color:#fff}@media screen and (min-width:800px){a.button{font-size:1.2rem;padding:.75rem 1rem}}a.github-button{background:#35a353}a.github-button:active,a.github-button:focus,a.github-button:hover{background:#3ab15b}p.subtitle{font-size:1.3rem;font-weight:300;margin-bottom:0;line-height:1.5}@media screen and (min-width:800px){p.subtitle{font-size:1.6rem;line-height:1.5}}a{color:var(--heading-color);text-decoration:none;font-weight:600;border-bottom:3px solid #b9cdfb}a:hover{color:#101010;border-bottom:3px solid #96b4f9}a.image-link{border-width:0}a.gatsby-resp-image-link{border-bottom:none!important}a code[class*=language-]{color:var(--link-color-darker)!important}a code[class*=language-]:hover{background:var(--link-color)!important;color:#fff!important}main{margin-top:95px}@media screen and (min-width:800px){main{margin-top:80px}}.emoji{margin:0 .4rem 0 0}.navbar{width:100%;position:fixed;top:0;left:0;background:var(--navbar-color);box-shadow:0 3px 13px rgba(100,110,140,.1),0 2px 4px rgba(100,110,140,.15);z-index:2;padding:.5rem 0}.navbar .grid{display:grid}.button-item{grid-row:first-line/1;grid-column:2;align-self:center}.menu-item{padding:.25rem 0;display:grid;grid-column:1/span 2;grid-template-columns:repeat(auto-fit,minmax(50px,1fr));text-align:center;grid-gap:.5rem}@media screen and (min-width:650px){.navbar .grid{display:grid;height:80px;grid-template-columns:auto 435px 40px;grid-template-rows:auto;align-items:center}.button-item{grid-row:auto;grid-column:auto}.menu-item{grid-column:auto;display:flex;justify-self:flex-end}}.navbar a{color:var(--navbar-color);font-weight:500;font-size:.9rem;border:1px solid transparent;line-height:1;margin:0;padding:.5rem .2rem;background:#2d2d31;font-family:var(--heading-font-family);letter-spacing:-.05rem;color:hsla(0,0%,100%,.8)}.navbar a[aria-current=page]{background:var(--yellow)!important;color:var(--navbar-color)}.navbar a:hover,.navbar a:hover:active,.navbar a:hover:focus{background:var(--yellow-orange);color:var(--navbar-color)}.navbar button{font-size:1rem}.navbar a .emoji{display:none}.navbar a.brand{font-weight:700;color:#fff;white-space:nowrap;border:none;display:flex;align-items:center;line-height:1;background:transparent!important;font-size:1rem;padding:.5rem 0}.navbar a.brand .emoji{display:inline-block!important}.navbar a.brand img{height:23px;width:23px}@media screen and (min-width:650px){.navbar a{font-size:1.1rem;padding:1rem}.navbar a.brand{font-size:1.2rem}}@media screen and (min-width:800px){.emoji{margin:0 .5rem 0 .1rem}.navbar{padding:0;box-shadow:none}.navbar a{padding:1rem 1.25rem;font-size:1.2rem}.navbar a.brand{font-size:1.5rem;border:none;background:transparent!important;color:#fff!important}.navbar a.brand img{height:30px;width:30px;margin-right:.25rem}.navbar .grid{grid-template-columns:auto 550px 50px}.menu-item{grid-gap:.75rem}}@media print{.navbar{display:none}}#dark-mode-button{margin-left:auto;display:flex;border:none;padding:.5rem 0 .5rem .5rem;box-sizing:content-box;cursor:pointer;font-size:1.1rem;background:transparent;line-height:1}#dark-mode-button:focus{outline:none}@media screen and (min-width:650px){#dark-mode-button{font-size:1.3rem}}@media screen and (min-width:800px){#dark-mode-button{font-size:1.6rem}}.footer{padding:2rem 0}.footer>.flex{flex-direction:column}.footer-links,.footer>.flex{align-items:center;justify-content:center}.footer-links{display:flex;flex-wrap:wrap}.flex nav{padding:1rem 0}.footer img{height:30px;width:30px}.footer a{font-weight:400;font-size:1rem;border:1px solid transparent;padding:.5rem;margin:0 .5rem;color:var(--light-font-color)}.footer a:hover{color:var(--heading-color);background:var(--light-background)}.footer a.img{display:flex;align-items:center;padding:0;margin:0 .5rem;background:none}.footer img{height:40px;width:40px}@media screen and (min-width:800px){.footer>.flex{align-items:flex-start;margin-left:-1.5rem;margin-right:-1.5rem}.footer a{padding:.75rem 1.25rem;font-size:1.2rem}.footer a.img{padding:0 .5rem;margin:0 1rem}}@media print{.footer{display:none}}table{display:block;border-collapse:separate;border-spacing:0;width:100%;max-width:100%;overflow-x:auto}tbody,thead{white-space:nowrap}th{border-bottom:2px solid var(--border)}tfoot th{border-top:1px solid var(--border)}td{border-bottom:1px solid var(--border)}td,th{text-align:left;padding:.75rem!important;-webkit-hyphens:auto;-ms-hyphens:auto;hyphens:auto;word-break:break-word}tbody tr:nth-child(2n){background-color:var(--light-background)}@media screen and (min-width:800px){table{display:table;border:1px solid var(--border)}tbody,thead{white-space:normal}}.flex{display:flex;align-items:center}.flex-row{display:flex;flex-direction:column}@media screen and (min-width:800px){.flex-row{flex-direction:row}}.flex-col{flex:1 1}.flex-two-thirds{flex:2 1}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.new-post,.popular-post{display:inline-block;color:#111;padding:.3rem .6rem;font-size:.85rem;margin-left:1rem;font-family:var(--heading-font-family);border:1px solid var(--subtle-border)}.new-post{background:#d3f9d8}.popular-post{background:#ffeead}@media screen and (min-width:800px){.new-post,.popular-post{margin-bottom:0}}header{background:var(--light-background);border-bottom:1px solid var(--subtle-border);padding:2rem 0}header h1{font-size:2rem;font-weight:600}header h1,header u{display:inline-block}header u{text-decoration:none;padding:.4rem 0}.article-header{padding-top:2rem;margin-bottom:.5rem}.article-header .thumb{display:flex;flex-direction:column}.article-header .thumb div:first-of-type{order:2}.article-header h1{font-weight:700;font-size:1.8rem;margin:0;line-height:1.15}.article-header .description{font-size:1.4rem;color:var(--light-font-color);font-weight:300;margin-top:2rem;margin-bottom:0}.post-meta{margin:1rem 0 0;padding:0;color:var(--light-font-color);font-size:.9rem;font-family:var(--heading-font-family)}.post-meta a{color:var(--font-color);border-width:0}.post-meta time{margin-top:.2rem;font-size:1rem}.post-meta .tags{margin-top:.5rem}.post-meta .tags a{background:var(--link-color);color:#fff;text-decoration:none}.post-meta .tags a:hover{background:var(--link-color-darker);color:#fff;text-decoration:none}.anchor.before{stroke:var(--link-color);stroke-width:1px;fill:var(--link-color);font-weight:700;left:-.25rem;border-width:0}.article-post .anchor.before{top:1rem}.article-post{margin-top:2rem;margin-bottom:2rem}@media screen and (min-width:800px){.article-header .thumb div:first-of-type{order:1}.article-header .thumb div:nth-of-type(2n){order:2}header{padding:3.5rem 0}.article-post{margin:3rem 0}.article-post h1,.article-post h2,.article-post h3,.article-post h4,.article-post h5{padding-top:1rem}.article-post h2{font-size:2rem}.post-meta{margin-top:2rem;font-size:1rem}header h1{font-size:2.5rem}header u{background:linear-gradient(transparent 85%,#bac8ff 0)}.article-header{padding-top:3.5rem}.article-header h1{padding-top:0;font-size:2.3rem;line-height:1.1}.article-header .thumb{flex-direction:row}.article-header .description{font-size:1.8rem;line-height:1.5}}.post-thumbnail{display:block!important}.post-thumbnail.gatsby-image-wrapper{min-width:75px;height:75px!important;width:75px!important;margin-bottom:.5rem}@media screen and (min-width:800px){.post-thumbnail.gatsby-image-wrapper{min-width:100px;height:100px!important;width:100px!important;margin-left:2.5rem;margin-bottom:0}}.search-form{display:flex}[type=search]{padding:.8rem 1rem;background:var(--light-background);border:2px solid var(--border);width:100%;max-width:400px;border-radius:.35rem;font-size:1rem;-webkit-appearance:none;margin-left:auto;margin-right:auto}.search-form [type=search]{border-right:none;border-top-right-radius:0;border-bottom-right-radius:0}:-moz-placeholder,:-ms-input-placeholder,::-moz-placeholder,::-webkit-input-placeholder,::placeholder{color:var(--light-font-color)}.suggested{flex-direction:column;align-items:stretch;margin-left:-1rem;margin-right:-1rem;padding:0}.suggested span{font-weight:400;display:block;font-size:.9rem;color:var(--transparent-text)}.suggested a{background:none;margin:.5rem 1rem;border-bottom:none;transition:all .2s ease;padding:1.5rem;background:var(--light-background);color:var(--heading-color);border:1px solid var(--subtle-border)}.suggested a:hover{transform:translate3D(0,-1px,0);background:var(--light-background-hover)}@media screen and (min-width:800px){.suggested{flex-direction:row}.suggested a{flex-grow:0;flex-shrink:0;flex-basis:calc(50% - 2rem)}.suggested a:first-of-type{text-align:right}}.small{max-width:650px}.meta,time{color:var(--light-font-color);font-size:.85rem;white-space:nowrap;font-weight:400}.meta{color:var(--medium-font-color);font-size:1rem}.count{font-weight:700;color:var(--link-color)}.tags{display:flex!important;flex-wrap:wrap;align-items:center;margin-left:-.25rem;margin-right:-.25rem}.tags>a{display:block;font-weight:500;background:var(--light-background);color:var(--font-color);margin:.2rem;padding:.5rem .6rem;font-size:.9rem;border-bottom:0;white-space:nowrap;line-height:1;border:1px solid var(--subtle-border)}.tags>a:hover{background:var(--light-background-hover);color:var(--heading-color)}mark{background:#ffec99}.utterances{margin-left:-4px;margin-right:-4px}kbd{background-color:#f7f7f7;border:2px solid rgba(0,0,0,.3);border-radius:3px;box-shadow:0 1px 0 rgba(0,0,0,.2),inset 0 0 0 2px #fff;color:#333;display:inline-block;font-family:Helvetica Neue,Inter,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;line-height:1.4;margin:0 .1em;padding:.1em .6em;text-shadow:0 1px 0 #fff;font-size:14px}#comments{margin-top:3rem}#comments h2{margin:0}@media print{#comments,.comments{display:none}}.post-row{display:flex;align-items:center;width:100%}.post-row time{display:block;flex:0 0 75px;font-size:.9rem}.post-row h3{flex:1 1}.posts .post:last-of-type a{border-bottom-width:0}.post a{display:flex;align-items:center;justify-content:stretch;padding:1rem 0;border-bottom:2px solid var(--light-background)}.post h3{margin-top:.1rem;margin-bottom:0;font-size:1.15rem;font-weight:700;text-decoration:none}@media screen and (min-width:800px){.posts{margin-left:-1rem;margin-right:-1rem}.post a{padding:.75rem 1rem;border-bottom-color:transparent}.post a:hover{background:var(--light-background)}.post h3{font-size:1.4rem;letter-spacing:-.02rem}.post-row time{flex:0 0 100px;font-size:1rem}}.projects{display:grid;grid-template-columns:repeat(2,1fr);padding:.75rem 0;grid-gap:1.5rem}.project{margin-bottom:1.5rem}.project .icon{font-size:1.5rem;width:40px}.project a{display:flex;align-items:center;margin-bottom:.25rem;border-width:0}.project a:hover h3{color:var(--light-font-color)}.project h3{margin:0;font-size:1.3rem;font-weight:700;text-decoration:underline}.project .description{font-size:1.1rem;color:var(--light-font-color)}.project a.button{margin-left:1.5rem;border-width:2px}@media screen and (min-width:800px){.projects{display:grid;grid-template-columns:repeat(3,1fr);padding:.75rem 0;grid-gap:3rem}.project h3{font-size:1.5rem}.project .description{font-size:1.2rem}}.categories{display:grid;grid-gap:.6rem;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin:2.5rem 0 0}@media screen and (min-width:1000px){.categories{grid-template-columns:repeat(auto-fit,minmax(100px,1fr))}.categories a.button{padding:.75rem .5rem;font-size:.9rem;margin:0}}.guide-thumbnails{display:none;flex-wrap:wrap;align-items:center}.guide-thumbnails a{border:2px solid var(--light-background);display:flex;align-items:center;justify-content:center;border-radius:.35rem;padding:.4rem;margin:.25rem;color:var(--font-color)}.guide-thumbnails span{display:none}.guide-thumbnails a:hover{background:var(--light-background);transform:translate3d(0,-1px,0)}.guide-thumbnails .gatsby-image-wrapper,.guide-thumbnails img{max-width:30px;max-height:30px}@media screen and (min-width:800px){.guide-thumbnails{display:flex;justify-content:flex-start}.guide-thumbnails a{min-width:80px;flex-direction:column}.guide-thumbnails span{display:block;font-size:.85rem;font-weight:400}.guide-thumbnails .gatsby-image-wrapper,.guide-thumbnails img{max-width:30px;max-height:30px;margin-bottom:.25rem}}.guides .gatsby-image-wrapper{height:50px!important;width:50px!important;min-width:50px}.guides.front-page .guide h2{margin-bottom:0}.guides.front-page img{height:50px!important;width:50px!important;min-width:50px;margin-left:1rem}.guides .guide:last-of-type{border-bottom-color:transparent}.guide{padding:1.5rem 0;display:flex;justify-content:space-between;flex-direction:column}.guide-section{order:2}.image-section{order:1}.guide h2{font-size:1.3rem;font-weight:600;padding-bottom:.5rem;margin:0;border-bottom:none;text-decoration:underline;font-family:var(--font-family);letter-spacing:0}.guide a h2:hover{color:var(--light-font-color)}.guide p{font-weight:400;margin:0;line-height:1.5;color:var(--medium-font-color);font-size:1.1rem}.guide time{font-size:1rem;display:block;margin-bottom:1rem}@media screen and (min-width:800px){.guide{flex-direction:row;padding:3rem 0;border-bottom:2px solid var(--light-background)}.guide-section{order:1}.image-section{order:2}.guide p{font-size:1.3rem}.guide h2{font-size:1.55rem}.guides.front-page img{margin-right:1.5rem}.guides.front-page .guide{border-bottom:none}.guides .gatsby-image-wrapper{height:100px!important;width:100px!important;min-width:100px;margin-left:2.5rem}.guides.front-page .guide{padding:1.5rem 0}}.stack-mobile{display:flex;flex-direction:column}@media screen and (min-width:800px){.stack-mobile{display:block}}.no-underline{border-bottom:none;margin-bottom:0;margin-top:.5rem!important}::selection{background:#3b5bdb;color:#fff}:root{--code-font-family:Menlo,"DM Mono","Roboto Mono",Courier New,monospace;--code-font-color:#b3b9c5;--code-background-color:#353535;--string:#92d192;--variable:#f2777a;--property:#abb2bf;--number:#fca369;--operator:#ac8d58;--punctuation:#d5d8df;--comment:#848991;--function:#62cfcf;--keyword:#ffeead;--attribute:#ffd479;--class:#e1a6f2;--tag:#6ab0f3;--error:#f2777a}code[class*=language-],pre[class*=language-]{-webkit-font-smoothing:subpixel-antialiased;color:var(--code-font-color);font-family:var(--code-font-family);font-size:.9rem;text-align:left;white-space:pre-wrap;word-spacing:normal;word-break:normal;word-wrap:normal;font-weight:400;line-height:1.7;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1.5rem;margin:.6rem -1.5rem 2rem;overflow:auto;box-shadow:0 0 1px rgba(0,0,0,.1),0 0 1px rgba(0,0,0,.06),0 2px 2px rgba(0,0,0,.06),0 4px 4px rgba(0,0,0,.06),0 8px 8px rgba(0,0,0,.06),0 16px 16px rgba(0,0,0,.06)}@media screen and (min-width:800px){code[class*=language-],pre[class*=language-]{font-size:1rem}pre[class*=language-]{padding:1.5rem;margin-left:auto;margin-right:auto;border-radius:.35rem}}:not(pre)>code[class*=language-],pre[class*=language-]{background-color:var(--code-background-color)}:not(pre)>code[class*=language-]{padding:5px;border:1px solid rgba(0,0,0,.05)}pre.language-text{border:1px solid rgba(0,0,0,.1)}code.language-text,pre.language-text{background:var(--light-background)!important;color:var(--dark-font-color)!important;box-shadow:none}pre.language-text code.language-text{border:none}code.language-shell:before{content:"$ ";color:var(--comment)}pre.language-terminal{position:relative;background:#fff;color:#595c62;padding-top:3rem;margin:2rem 0;border-radius:.35rem;border:1px solid #c7c9ca;box-shadow:0 .5rem 1rem rgba(51,51,51,.2),0 .5rem 2rem rgba(51,51,51,.2)}code.language-terminal{color:#595c62}pre.language-terminal:before{content:"\2022 \2022 \2022";position:absolute;top:0;left:0;background:linear-gradient(180deg,#eaeaea,#d2d2d2);color:#b9bcbd;width:100%;font-size:2.5rem;margin:0;line-height:0;padding:15px 0 12px;text-indent:6px;letter-spacing:-9px;border-bottom:1px solid #a6a9aa}pre.language-terminal:after{content:"Output";line-height:1;font-family:Myriad Pro,sans-serif;text-shadow:0 1px 0 hsla(0,0%,100%,.5);font-size:.9rem;position:absolute;top:6px;right:.5rem}.gatsby-highlight-code-line{background-color:#191919;display:block;margin-right:-1rem;margin-left:-1.5rem;padding-right:1.5rem;padding-left:1.25rem;border-left:.25rem solid #748ffc}.token.cdata,.token.comment,.token.doctype,.token.important,.token.prolog{color:var(--comment)}.token.punctuation{color:var(--punctuation)}.token.namespace{opacity:.7}.token.property{color:var(--property)}.token.constant,.token.deleted,.token.symbol,.token.tag{color:var(--tag)}.token.number{color:var(--number)}.token.builtin,.token.char,.token.inserted,.token.url{color:var(--code-font-color)}.token.attr-name,.token.selector{color:var(--attribute)}.token.attr-value,.token.string{color:var(--string)}.token.operator{color:var(--operator)}.token.atrule,.token.keyword{color:var(--keyword)}.token.function{color:var(--function)}.language-css,.token.boolean,.token.class-name{color:var(--class)!important}.token.regex{color:var(--keyword)}.token.variable{color:var(--variable)}.token.bold{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.filename{font-size:.9rem;margin-bottom:-.8rem;padding:.3rem 1.5rem;line-height:1;font-family:Myriad Pro,sans-serif;background:linear-gradient(180deg,#eaeaea,#d2d2d2);border:1px solid #b9bcbd;color:#4d494d;z-index:2;margin-left:-1.5rem;margin-right:-1.5rem;text-shadow:0 1px 0 hsla(0,0%,100%,.5);box-shadow:inset 0 1px 0 hsla(0,0%,100%,.5),0 1px 0 #515151;text-align:center}@media screen and (min-width:800px){.filename{padding:.3rem 1rem .5rem;border-top-left-radius:.3rem;border-top-right-radius:.3rem;margin-left:auto;margin-right:auto}}code::selection,pre::selection{text-shadow:none;color:inherit;background:hsla(0,0%,58.8%,.3)!important}code[class*=language-] ::selection,pre[class*=language-]::selection{text-shadow:none;color:inherit;background:hsla(0,0%,58.8%,.3)!important}</style><meta name="generator" content="Gatsby 3.0.4"><title>Command Line Tutorial: Usage in Linux and macOS | Tania Rascia</title><link data-react-helmet="true" rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAsTAAALEwEAmpwYAAABWWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS40LjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyI+CiAgICAgICAgIDx0aWZmOk9yaWVudGF0aW9uPjE8L3RpZmY6T3JpZW50YXRpb24+CiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPgogICA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgpMwidZAAAF8ElEQVRYCaVXS28bVRQ+8/A4ju2kEYimiUjaNCWEKryECOURilggdQPLSpFQd6zYICFVLGklFvwD2FQCdmxAIJUuukFEFWpK2BCEVGABgVSKGxK7Htvz4PvuzBlPbFOa9Erje33POd/5zrnn3rljnTt37u04jp8JgqA+Ojr68e7u7kIURa8WCoXG7a0teX7p5eqzi88dCYJOKGJbMrDFEgShxBIJFRzbjb0hz7q2stK4cvmrT2ZmTtSbzeabjuNsA9vGU7I876PPLl265sLh8sjIyGKr1ZLNzc23PM9zLMuSMIykEwTiFVwZP/yQtNptuO/3D1BZXb0uP66tSbValXq9Li+8+JIcm1mQoWJR/Gb7dc5Bz0aQgmA5Fr9eXz67vHzGtW17y/d9AasGhGUoRQiig/9WGIXSaNyR7e1tqw0CJLan4a9jO7L+07p8/eUX8uhjJ+WXn9dlamoazxTJRK7rFmEosPdha+Ox4MMvFotVZOWiC6ckQQJFOKBzC3NFEAXbxF2M5A5s6XS5PCwzsydkbGxMjh0/LgWvYCIFgkRxHBEImEMaAMZcBs41XQJjwOgIR4ZpS9BpT+UI2bCsnDjVIihT20IWO52O+H4LyxemNsTtYtJP2hiow7EhkE4O7GgTRyYSIIE1yowLkZJGhCZA5C1ZHna0QeTUwmMZ3UHgwLD2EFCG7GnKZsb8TxL0gUQZGX4oYwbo1EVhWVhKxyEk9VNiGRLR+lpCQJ1QzLFpBE//J1HqfCLWX+pzB21hy1awC2rotdq5fEm+umTVLu1jFmHPXPevSiJsyTAMEGlvDVAjlomJCVk8dUqGS8MyMTkpOE/MFmb62RSHvrQQjQA/e5ZAJ7WnOQsQh5LB0miMPME26E88+ZTwUQchbMzS4NwyAQ4IkvN8XCpywK2ok+xZyUOlkvx686b8cOOGlIZLpg644Dnf4JIAmVkIWCsWHHMZfoPtCLLBILQRO9/MEuQJ8JTC4WHI4LDA1mrLlW8uG4J5w75xDpjFGCGA0vCwjB46ZLBImodZHwEC5bPgo6D++P1PwenE2IxjzU6f0z0TdNGNjphRbcdkhEvi4XCaHH8w86WmpgZMBmBwe3tb4qAlry09ncoJmCY87dTwnnqYE9t1Hdndrct336+hYCdBxssyYQiQbQdvsxDH9fsffChSeVhqO3ekAENmIQssTyLH7T/lYMn3p9+J5OjhiixevyoXLlyUhYWFjL/LAiGBeqMp848clcoDU/Le1ZpI0MHhgrXMrW1mdY8Dciy7tnx725d3Hi/K6bmTUhAffLuFnG5D7k/4DHHahR1ZOuKJE2PPY98zA93AOSLs3VpXh9wZxPyoJZNVx7wrbBsuISAKg09rQJBuW7b+acqx8aqcn5+SZC/3Hjx3czxYxsBCLC/rYG3tlmzW6jKn5wNM0gwkxiwYLgcbbiVZ/SXSg/86LIS09W1DTugk1XTMte+ulJofoAdoCCxGii5r6mdvBjKxDnIWOrXfnhCZ5yRYdU6ojAAnzeGRHps8ivsOIC4LwfI9QEzmiKaOVE4ZxnoU0wcx8y0joJNUogGfPFOV77fvJaA1RhziZwTUGR0zes3Afh0O0icWG7FJgL7UnyGgf1QpywAnoHw/jQ65pUmCuL1X+74LickAFA3b+3SuxPlm1KD4pkTALBvTsiUAUxOqUUwN9qwX1NWKijpOYLq/KtOeEnXOrZ0WYXZBYAZAynwXeDwgVZkpSwjAFb3lEbPMqIBulBIVu40YxCReclE1co/zXHp+IPyFD4rTuIh8WnBx9cK5QQMKkwdj8z/te2V5PXNFV7uk14CAZTzjehfPzs6+gsvJecjKeFfY3s7OzhtwPM1rFJgGSBVkScV2YzngKI2UGcCHCw+BaGNj4wyyPocsNN3IsqZxQThr4yrG61i5XC5WKhW8jTvpEhzQcc6MzoErxEVzENy7/JDFdX7VLUTRyt+3boVBu93AFhnC/T7mJxaz0Xtq5TD/d2iqDFkkRgACjUZDarWawcUX+R04H0Pgn/8LxknWV8mJGyQAAAAASUVORK5CYII="><meta data-react-helmet="true" name="description" content="You might be like me - I used computers for twenty years without ever touching a command prompt. I didn&#39;t know anything about it, and it…"><meta data-react-helmet="true" name="image" content="https://www.taniarascia.com/static/fc5baca5976a4d970ad8480236797271/92ab1/terminal.png"><meta data-react-helmet="true" property="og:url" content="https://www.taniarascia.com/how-to-use-the-command-line-for-apple-macos-and-linux/"><meta data-react-helmet="true" property="og:type" content="article"><meta data-react-helmet="true" property="og:title" content="Command Line Tutorial: Usage in Linux and macOS"><meta data-react-helmet="true" property="og:description" content="You might be like me - I used computers for twenty years without ever touching a command prompt. I didn&#39;t know anything about it, and it…"><meta data-react-helmet="true" property="og:image" content="https://www.taniarascia.com/static/fc5baca5976a4d970ad8480236797271/92ab1/terminal.png"><meta data-react-helmet="true" name="twitter:card" content="summary"><meta data-react-helmet="true" name="twitter:title" content="Command Line Tutorial: Usage in Linux and macOS"><meta data-react-helmet="true" name="twitter:description" content="You might be like me - I used computers for twenty years without ever touching a command prompt. I didn&#39;t know anything about it, and it…"><meta data-react-helmet="true" name="twitter:image" content="https://www.taniarascia.com/static/fc5baca5976a4d970ad8480236797271/92ab1/terminal.png"><script data-react-helmet="true" type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","url":"https://www.taniarascia.com","name":"Command Line Tutorial: Usage in Linux and macOS","alternateName":"Command Line Tutorial: Usage in Linux and macOS"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.taniarascia.com/how-to-use-the-command-line-for-apple-macos-and-linux/","name":"Command Line Tutorial: Usage in Linux and macOS","image":"https://www.taniarascia.com/static/fc5baca5976a4d970ad8480236797271/92ab1/terminal.png"}}]},{"@context":"http://schema.org","@type":"BlogPosting","url":"https://www.taniarascia.com","name":"Command Line Tutorial: Usage in Linux and macOS","alternateName":"Command Line Tutorial: Usage in Linux and macOS","headline":"Command Line Tutorial: Usage in Linux and macOS","image":{"@type":"ImageObject","url":"https://www.taniarascia.com/static/fc5baca5976a4d970ad8480236797271/92ab1/terminal.png"},"description":"You might be like me - I used computers for twenty years without ever touching a command prompt. I didn't know anything about it, and it…"}]</script><link rel="icon" href="https://www.taniarascia.com/favicon-32x32.png?v=07f5a193c5a1357203c0389b1002fb71" type="image/png"><link rel="manifest" href="https://www.taniarascia.com/manifest.webmanifest" crossorigin="anonymous"><meta name="theme-color" content="#5183f5"><link rel="apple-touch-icon" sizes="48x48" href="https://www.taniarascia.com/icons/icon-48x48.png?v=07f5a193c5a1357203c0389b1002fb71"><link rel="apple-touch-icon" sizes="72x72" href="https://www.taniarascia.com/icons/icon-72x72.png?v=07f5a193c5a1357203c0389b1002fb71"><link rel="apple-touch-icon" sizes="96x96" href="https://www.taniarascia.com/icons/icon-96x96.png?v=07f5a193c5a1357203c0389b1002fb71"><link rel="apple-touch-icon" sizes="144x144" href="https://www.taniarascia.com/icons/icon-144x144.png?v=07f5a193c5a1357203c0389b1002fb71"><link rel="apple-touch-icon" sizes="192x192" href="https://www.taniarascia.com/icons/icon-192x192.png?v=07f5a193c5a1357203c0389b1002fb71"><link rel="apple-touch-icon" sizes="256x256" href="https://www.taniarascia.com/icons/icon-256x256.png?v=07f5a193c5a1357203c0389b1002fb71"><link rel="apple-touch-icon" sizes="384x384" href="https://www.taniarascia.com/icons/icon-384x384.png?v=07f5a193c5a1357203c0389b1002fb71"><link rel="apple-touch-icon" sizes="512x512" href="https://www.taniarascia.com/icons/icon-512x512.png?v=07f5a193c5a1357203c0389b1002fb71"><link rel="alternate" type="application/rss+xml" title="Tania Rascia | RSS Feed" href="https://www.taniarascia.com/rss.xml"><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><link as="script" rel="preload" href="./Command Line Tutorial_ Usage in Linux and macOS _ Tania Rascia_files/webpack-runtime-d90fc89dfff38d5744a7.js"><link as="script" rel="preload" href="./Command Line Tutorial_ Usage in Linux and macOS _ Tania Rascia_files/framework-0049b5a9acaf4f12ebf6.js"><link as="script" rel="preload" href="./Command Line Tutorial_ Usage in Linux and macOS _ Tania Rascia_files/app-87f35bf87424d12e9648.js"><link as="script" rel="preload" href="./Command Line Tutorial_ Usage in Linux and macOS _ Tania Rascia_files/commons-edafb78d32069c00edd1.js"><link as="script" rel="preload" href="./Command Line Tutorial_ Usage in Linux and macOS _ Tania Rascia_files/432de67971864e70b73378552aca03e23c7c10bb-a5a006ba84a5412cbccf.js"><link as="script" rel="preload" href="./Command Line Tutorial_ Usage in Linux and macOS _ Tania Rascia_files/component---src-templates-post-js-a31070cfdf2c2607b553.js"><link as="fetch" rel="preload" href="https://www.taniarascia.com/page-data/how-to-use-the-command-line-for-apple-macos-and-linux/page-data.json" crossorigin="anonymous"><link as="fetch" rel="preload" href="https://www.taniarascia.com/page-data/app-data.json" crossorigin="anonymous"><link rel="prefetch" href="https://www.taniarascia.com/page-data/guides/page-data.json" crossorigin="anonymous" as="fetch"><link rel="prefetch" href="https://www.taniarascia.com/page-data/projects/page-data.json" crossorigin="anonymous" as="fetch"><link rel="prefetch" href="https://www.taniarascia.com/page-data/me/page-data.json" crossorigin="anonymous" as="fetch"><link rel="prefetch" href="https://www.taniarascia.com/page-data/tags/linux/page-data.json" crossorigin="anonymous" as="fetch"><link rel="prefetch" href="https://www.taniarascia.com/page-data/tags/tutorial/page-data.json" crossorigin="anonymous" as="fetch"><link rel="prefetch" href="https://www.taniarascia.com/page-data/blog/page-data.json" crossorigin="anonymous" as="fetch"><link rel="prefetch" href="https://www.taniarascia.com/page-data/tags/mac-os/page-data.json" crossorigin="anonymous" as="fetch"><link rel="prefetch" href="https://www.taniarascia.com/page-data/me/page-data.json" crossorigin="anonymous" as="fetch"><link rel="prefetch" href="https://www.taniarascia.com/page-data/index/page-data.json" crossorigin="anonymous" as="fetch"><link rel="prefetch" href="https://www.taniarascia.com/page-data/tags/cli/page-data.json" crossorigin="anonymous" as="fetch"><link rel="prefetch" href="https://www.taniarascia.com/component---src-pages-projects-js-23a02253cb4f3416dba5.js"><link rel="prefetch" href="https://www.taniarascia.com/component---src-pages-guides-js-dfe5550dad815091ab6a.js"><link rel="prefetch" href="https://www.taniarascia.com/component---src-templates-page-js-660a76282083f8675253.js"><link rel="prefetch" href="https://www.taniarascia.com/component---src-templates-page-js-660a76282083f8675253.js"><link rel="prefetch" href="https://www.taniarascia.com/component---src-templates-tag-js-d5a91b557ad9abd3ecce.js"><link rel="prefetch" href="https://www.taniarascia.com/component---src-templates-tag-js-d5a91b557ad9abd3ecce.js"><link rel="prefetch" href="https://www.taniarascia.com/component---src-pages-blog-js-aeaa7c4b5f906f913b20.js"><link rel="prefetch" href="https://www.taniarascia.com/component---src-pages-index-js-286b22f2c2c5d27fb64b.js"><link rel="prefetch" href="https://www.taniarascia.com/component---src-templates-tag-js-d5a91b557ad9abd3ecce.js"></head><body data-new-gr-c-s-check-loaded="14.1018.0" data-gr-ext-installed=""><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><nav class="navbar"><div class="container"><div class="grid"><div><a class="brand" href="https://www.taniarascia.com/"><span class="emoji"><img src="./Command Line Tutorial_ Usage in Linux and macOS _ Tania Rascia_files/floppylogo-0c07fbe46fbceda7efdfb169dd4ef14a.png" alt="Floppy Diskette"></span> <!-- -->Tania Rascia</a></div><div class="menu-item"><a href="https://www.taniarascia.com/blog">Blog</a><a href="https://www.taniarascia.com/guides">Guides</a><a href="https://www.taniarascia.com/projects">Projects</a><a href="https://www.taniarascia.com/me">About me</a></div><div class="button-item"><button id="dark-mode-button">🌙</button></div></div></div></nav><main><article><header class="article-header"><div class="container"><div class="thumb"><div><h1>Command Line Tutorial: Usage in Linux and macOS</h1><div class="post-meta"><div>By <a href="https://www.taniarascia.com/me">Tania Rascia</a> on <time>January 09, 2017</time></div><div class="tags"><a class="tag-cli" href="https://www.taniarascia.com/tags/cli">cli</a><a class="tag-linux" href="https://www.taniarascia.com/tags/linux">linux</a><a class="tag-macOS" href="https://www.taniarascia.com/tags/mac-os">macOS</a><a class="tag-tutorial" href="https://www.taniarascia.com/tags/tutorial">tutorial</a></div></div></div><div class="post-thumbnail gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:150px;height:150px"><img aria-hidden="true" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAClElEQVQ4y52U7WvTUBTGTxr3aVvTpt27aZP0LanObt1W26bb6upcde8b9QXFCQpDqjhRBL8KA0EZFjZcEQSn/aD+gRsEdrwnW5ruw2rXwMPNJff5nScn9wbGr6dhc+uNyyeKPADwl1wcz3OtidaSRxDc/NMXr1yKqgIwILf5+i34fD6gi+cAXNCiOMsCHkGAZy+3ICgrHDx5Xob32x/zy3fv/5lfXT9YXC/9ZOOvVnVnZe1gqXTv77sP27OlR49PKqw+ePh9cHAQB5j6+vpQlmUMBAIoSRJKNNbvT+dSoD7Suv7+fmSBfoN9LayXvvr9fszn84fFuTmTQU1VVc1YLGZGo9Gm0jTtcIABi0srP+rA+dW1fQJOTk6ae3t7x7VaDdPpNDIoMihGIpHzdExFKeGthcWDOrC4uFwVRRFnCgVzd3cXK5UKJhIJHBoasqAsyblQAlKbCsXbDpBNquwrYyaTMSkZpS2Xy7izs4MbGxtWT8+DErC3txenb846wKmZQrWnpwdDoZCpKAqyvmAqlULDMDCZTGI4HG6akLy5/A0HmJ2athIykGknITAlo1du0kOMMQ+9UdrIOcBUJmv1kKrZCwlsqxmQQlAYdkAcYHJiour1es8AWxUBRdGLI8kxB5gYHa16PB7rYTtAL/MOX0s4wCtXh6uCILQNJK8ejztATdf33W63DTy+iGxgNBZzgOFIZL+7uxt1XT9ii/573GzRWvJQGDUUakioad86Ojqwq6sLOzs7LyTykJcVqJ3swWwGcjljLK7rX9gG/sSqfr6IyKPrWsUwsumJ8XGAkZEEsBMBknTZ+smyXX8qf8PYqLPP/X4fsDNvBQuHQwAsGZtkOVVR+GAw2JYUWebZf4CT5SD8A2NXrCbQCisZAAAAAElFTkSuQmCC" alt="" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center center; opacity: 0; transition-delay: 500ms;"><picture><source srcset="/static/fc5baca5976a4d970ad8480236797271/92ab1/terminal.png 1x"><img srcset="/static/fc5baca5976a4d970ad8480236797271/92ab1/terminal.png 1x" src="./Command Line Tutorial_ Usage in Linux and macOS _ Tania Rascia_files/terminal.png" alt="" width="150" height="150" loading="lazy" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center center; opacity: 1; transition: opacity 500ms ease 0s;"></picture><noscript><picture><source srcset="/static/fc5baca5976a4d970ad8480236797271/92ab1/terminal.png 1x" /><img loading="lazy" width="150" height="150" srcset="/static/fc5baca5976a4d970ad8480236797271/92ab1/terminal.png 1x" src="/static/fc5baca5976a4d970ad8480236797271/92ab1/terminal.png" alt="" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div></div><p class="description">The essential command line tutorial for beginners. Learn how to navigate your computer with the CLI to modify files, update permissions and more.</p></div></header><div class="container"><div class="article-post"><p>You might be like me - I used computers for twenty years without ever touching a command prompt. I didn't know anything about it, and it seemed scary and overwhelming. I thought it was something only really advanced users knew anything about. When I inevitably encountered a situation where I had to gain some basic command line knowledge, I discovered how useful and easy it is.</p>
+<p>Learning to use the command line will open up endless possibilities for you - it is undoubtedly essential in web development and programming, but even regular users doing everyday tasks will benefit. Follow along in this tutorial and you'll see how simple it is to use, and how powerful it can be.</p>
+<p>If you've never used the command line, this article will be extremely helpful to you. If you have a basic or intermediate knowledge of the command line, you may learn some new tips and tricks.</p>
+<blockquote>
+<p>Apple macOS and most Linux servers use almost all the exact same commands, so this tutorial applies to both. Even if you use a Windows PC, this will be useful to learn as your websites are likely hosted on a Linux server.</p>
+</blockquote>
+<h4 id="prerequisites" style="position:relative;"><a href="https://www.taniarascia.com/how-to-use-the-command-line-for-apple-macos-and-linux/#prerequisites" aria-label="prerequisites permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Prerequisites</h4>
+<ul>
+<li>There are no prerequisites to this article - as long as you have basic computer literacy you'll be able to follow along</li>
+</ul>
+<h4 id="goals" style="position:relative;"><a href="https://www.taniarascia.com/how-to-use-the-command-line-for-apple-macos-and-linux/#goals" aria-label="goals permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Goals</h4>
+<ul>
+<li>Learn what the command line interface is and how it relates to your computer</li>
+<li>Learn some basic terminology related to the command line</li>
+<li>Learn the most common, useful commands</li>
+</ul>
+<h4 id="what-well-learn" style="position:relative;"><a href="https://www.taniarascia.com/how-to-use-the-command-line-for-apple-macos-and-linux/#what-well-learn" aria-label="what well learn permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What we'll learn</h4>
+<ul>
+<li>Show current directory and contents of directory</li>
+<li>Moving between directories</li>
+<li>
+<p>Creating files and directories</p>
+<ul>
+<li>Write text to a file</li>
+<li>View contents of a file</li>
+</ul>
+</li>
+<li>Deleting files and directories</li>
+<li>Copying and pasting files and directories</li>
+<li>Moving/cutting files and directories</li>
+<li>Running multiple commands</li>
+<li>Changing permissions</li>
+<li>Run as administrator</li>
+<li>Connecting to another computer or server</li>
+<li>A few more useful commands</li>
+<li>Using a basic text editor</li>
+</ul>
+<h2 id="what-is-the-command-line" style="position:relative;"><a href="https://www.taniarascia.com/how-to-use-the-command-line-for-apple-macos-and-linux/#what-is-the-command-line" aria-label="what is the command line permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What is the command line?</h2>
+<p>I promise this is the most important thing to understand, and it completely blew my mind when I finally understood it.</p>
+<p>Windows, macOS - whatever operating system you're using - is simply a visual representation of your computer. This is known as a <strong>Graphical User Interface (GUI)</strong>. Take away the file explorer, the desktop, the icons, and all the other graphics, and you're left with the command line. Instead of dragging and dropping, pointing and clicking, you're typing. That's the only difference.</p>
+<p>I really want to reiterate this. Your <em>entire</em> computer can be accessed through the command line. You can do everything through the command line. It's the same computer you already know and love.</p>
+<p>On a Mac, if I open Finder, this is my home folder. It's called <code class="language-text">taniarascia</code>.</p>
+<p><span class="gatsby-resp-image-wrapper" style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; max-width: none;">
+      <a class="gatsby-resp-image-link" href="https://www.taniarascia.com/static/85e47e01e3bfb98b37d5aea80c795448/5b503/Screen-Shot-2017-01-07-at-2.46.52-PM-1.png" style="display: block" target="_blank" rel="noopener">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom: 65.0307%; position: relative; bottom: 0px; left: 0px; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAACM0lEQVQ4y6WTzW7TQBDHUyEQRw4cgAegz8EpjcQhh1rwLjwAvUAqAQlOm22FOPIWCBo11KISStMkG38kdtLYTYg/4jj+GGacBhJAAsRIf+3Meue3M7vrDABkOu/fPThufHjMz+XtTosLuqoJbRxlLgtKRxZOpROh+rG6iLkidNWu0NN6giIrgqZo23pXf6Sp2sOdpzvXMmjXm/Uvp4oqA29xkDsKtFC14xoYugF6T4e+0YdBf5D6mAyWacF4NIbhxfC7j9/tfD5/m4A3j46qJ5IkgaLIoaob8WfZiC8tM8bq4yAI4iiK4iRJYjLySWQ0h36ILkynUzObzd5NgWdnZxLnHBzbjqzxJEFgYg2HCQKT+XxOpNQnJQvyakwbA25s5XK5BbDZbEqDwQD8qUdAkHgPXNuGq4WAVcDSqBrSSkyVwmw2+wGs1+uSbhgQzGaROf4Kn9o98Bznr4BU4W+BqqrhpB9dIlAdjmCOILIwDH+u6M/ARqMhaZoGnjeNxqMRZS0Xp8k0/hMQL0QysGUbL8V1vQRbTJZGR7Q4pvV45YJ+BbbarVq/3wfHdQLf90PqdClcvBZjfqqV7/Mr4AUC76TADufnpmnis3HwPflYqQOu64LrB+DhOJlMKAHiaNEujdhoquWR4DsMEHiPgDeKL14+YXuVt2WxXCmLe0wsiUx8LbJyeZ+VXhVZ4XmB7RZ2WalYYqzCGNtf10Hl4M0hO3y2eX/zVmYru0XQDfoF/1PE2PgGtyAkGVxweqYAAAAASUVORK5CYII=&quot;); background-size: cover; display: block; transition: opacity 0.5s ease 0.5s; opacity: 0;"></span>
+  <img class="gatsby-resp-image-image" alt="Screen Shot 2017 01 07 at 2 46 52 PM 1" title="Screen Shot 2017 01 07 at 2 46 52 PM 1" src="./Command Line Tutorial_ Usage in Linux and macOS _ Tania Rascia_files/Screen-Shot-2017-01-07-at-2.46.52-PM-1.png" srcset="/static/85e47e01e3bfb98b37d5aea80c795448/222b7/Screen-Shot-2017-01-07-at-2.46.52-PM-1.png 163w,
+/static/85e47e01e3bfb98b37d5aea80c795448/ff46a/Screen-Shot-2017-01-07-at-2.46.52-PM-1.png 325w,
+/static/85e47e01e3bfb98b37d5aea80c795448/a6d36/Screen-Shot-2017-01-07-at-2.46.52-PM-1.png 650w,
+/static/85e47e01e3bfb98b37d5aea80c795448/e548f/Screen-Shot-2017-01-07-at-2.46.52-PM-1.png 975w,
+/static/85e47e01e3bfb98b37d5aea80c795448/3c492/Screen-Shot-2017-01-07-at-2.46.52-PM-1.png 1300w,
+/static/85e47e01e3bfb98b37d5aea80c795448/5b503/Screen-Shot-2017-01-07-at-2.46.52-PM-1.png 1976w" sizes="(max-width: 650px) 100vw, 650px" style="width: 100%; height: 100%; margin: 0px; vertical-align: middle; position: absolute; top: 0px; left: 0px; opacity: 1; transition: opacity 0.5s ease 0s; color: inherit; box-shadow: white 0px 0px 0px 400px inset;" loading="lazy">
+  </a>
+    </span></p>
+<p>I can access the same exact files through a web browser. If I open Google Chrome and I type in <code class="language-text">/Users/taniarascia</code>, I'll be in the same place.</p>
+<p><span class="gatsby-resp-image-wrapper" style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; max-width: none;">
+      <a class="gatsby-resp-image-link" href="https://www.taniarascia.com/static/db369962dce8c82bff00b54bf2ccb3ec/6c68b/Screen-Shot-2017-01-07-at-2.48.38-PM-1.png" style="display: block" target="_blank" rel="noopener">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom: 65.03067484662577%; position: relative; bottom: 0; left: 0; background-image: url(&#39;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAACmElEQVQ4y6WTy08TURTGSxQTRQxFTNmZuDBqFIwSH4mKmpAYFybKKCRo/A/cCmvjg2fVASlBFkhb/gfZaoSJGEvpg84DKH3QaTstJKa0c+cez50pBSI7v+TLuZl899fTc2ZsAMO26y3Nt1putHS03bvffrP1Nsfceucud+5CE1drP87V1jdwx+pP7Kl1DQ7udNNF7kzT5faz55s7Ll252mY7UFNlQ1U/e/LwZ9fzDnjZ3QOfJyZgfHwcXK4xGB4egSHne3jX1w9ve/sqtbd/AF69fgOd3GPgHj2AzqddwHV2KTXVVUcZ8PDXmZm5uVkB/At+PZlMGsyxWMzIZDJGPpczSsWiAQAGEyHEoFh1vWQokmREwkFdWV6Gb99/RLA9uwlcXAwI0agCqpok4XCISpJEQ6EQ9fv9NBAI0M3NTbq1tUV1XacIpsRAJqXmGU3QkE6nRWTVmcBEIiJoWQBF+UM2NgqwrULBOm/k8yCKEsTjcSgWi8BY2KRp1jHL4D/aAa7Jc0LAXwBNA/xxqIS3lVpfh9XVKASDQVjHM5PVoFnNYCKR2AHGV32CqursOWFBlrWqdQnD2L0CsiRDJputAMv+FxhbnhfisRLohM2D7g6bl1dw6JGICD6fD+II369DTdNEu91e7nBlXgguFiGTocSM7BK7k9NyVJZlGsZFpVIqhb0hE5jP58XGxkYLGJV/z65FS7gEWmJLxFDFbAzZbJbgDIkoigS3Scqj2XapDFxyOBzlpSi/FpbCOuRysK/Sqmpu2VpKat8MvloxBJrv4aGxkYEXzqEvo5OTng9er4f3eCy70V6vlx8ddfFOp5MfHBzkXS4XPz09zbvdbivjdn/EzKepqanuIyjbqZPXGJR9gwf/04xR9RchqtKmEiPhkwAAAABJRU5ErkJggg==&#39;); background-size: cover; display: block;"></span>
+  <img class="gatsby-resp-image-image" alt="Screen Shot 2017 01 07 at 2 48 38 PM 1" title="Screen Shot 2017 01 07 at 2 48 38 PM 1" src="./Command Line Tutorial_ Usage in Linux and macOS _ Tania Rascia_files/Screen-Shot-2017-01-07-at-2.48.38-PM-1.png" srcset="/static/db369962dce8c82bff00b54bf2ccb3ec/222b7/Screen-Shot-2017-01-07-at-2.48.38-PM-1.png 163w,
+/static/db369962dce8c82bff00b54bf2ccb3ec/ff46a/Screen-Shot-2017-01-07-at-2.48.38-PM-1.png 325w,
+/static/db369962dce8c82bff00b54bf2ccb3ec/a6d36/Screen-Shot-2017-01-07-at-2.48.38-PM-1.png 650w,
+/static/db369962dce8c82bff00b54bf2ccb3ec/e548f/Screen-Shot-2017-01-07-at-2.48.38-PM-1.png 975w,
+/static/db369962dce8c82bff00b54bf2ccb3ec/3c492/Screen-Shot-2017-01-07-at-2.48.38-PM-1.png 1300w,
+/static/db369962dce8c82bff00b54bf2ccb3ec/6c68b/Screen-Shot-2017-01-07-at-2.48.38-PM-1.png 1888w" sizes="(max-width: 650px) 100vw, 650px" style="width: 100%; height: 100%; margin: 0px; vertical-align: middle; position: absolute; top: 0px; left: 0px; opacity: 0;" loading="lazy">
+  </a>
+    </span></p>
+<p>The same is true of the command line interface. I'm going to open <strong>Terminal.app</strong> by opening Spotlight search (command + spacebar) and type in <strong>Terminal</strong>.</p>
+<p><span class="gatsby-resp-image-wrapper" style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; max-width: none;">
+      <a class="gatsby-resp-image-link" href="https://www.taniarascia.com/static/6f4fb57c32322a2be926aea4fce27597/27f8b/Screen-Shot-2017-01-07-at-3.00.00-PM.png" style="display: block" target="_blank" rel="noopener">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom: 68.09815950920245%; position: relative; bottom: 0; left: 0; background-image: url(&#39;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAABr0lEQVQ4y+XSy0oCURgH8BNTCy/o7LyMms4NwnVEuw49QgtJUNFRMG2hpm/gK7jqXdwEbSMHKdGFpZMjXdBmKme62DeiEnQhadnAjznnG87/O4cz6PB0vHR9crQuto+3e/2bLbknY1mW8e3dHZZ7V7hxfoa73S6+kiR80W7jfr+Ph8MhHgwGczDfliRps1KprKDVtQ2ylEmKueLeuHBQGBUPCnqpVNTz+Zy+n81omUxaF4SEFolEtGg0qsXjcS2VSmnJZHICxk9QeyuXy5fVanUVLS8TDoZlRY7lXmg6oHAc+2CgKEqlKLfq9XpVt9utOp1O1eVyTd4fQU0hSXIUDoc7rVaLRxaLxeH3+2s0Qz8zDHNP07RqYFl2Amrz8QzHcXM8zys+n28kCEKn0WjwyGw2OwKBgAgLX4ACHr5iNPmqDg0UOM0Ijv05EBZ9G/idWWAikfjvgTX4+AyB81v+rR8vZXrL6iKMQI/HM9lhs9nkkclkMv5DEbq9Trs+LsIIhR3qsVisU6/XeUQQhNlut++ArM1mS4O9RcC6tNVqzQaDwd1QKESi6bMEiD8yMtA7qf6FiyTGqusAAAAASUVORK5CYII=&#39;); background-size: cover; display: block;"></span>
+  <img class="gatsby-resp-image-image" alt="Screen Shot 2017 01 07 at 3 00 00 PM" title="Screen Shot 2017 01 07 at 3 00 00 PM" src="./Command Line Tutorial_ Usage in Linux and macOS _ Tania Rascia_files/Screen-Shot-2017-01-07-at-3.00.00-PM.png" srcset="/static/6f4fb57c32322a2be926aea4fce27597/222b7/Screen-Shot-2017-01-07-at-3.00.00-PM.png 163w,
+/static/6f4fb57c32322a2be926aea4fce27597/ff46a/Screen-Shot-2017-01-07-at-3.00.00-PM.png 325w,
+/static/6f4fb57c32322a2be926aea4fce27597/a6d36/Screen-Shot-2017-01-07-at-3.00.00-PM.png 650w,
+/static/6f4fb57c32322a2be926aea4fce27597/e548f/Screen-Shot-2017-01-07-at-3.00.00-PM.png 975w,
+/static/6f4fb57c32322a2be926aea4fce27597/3c492/Screen-Shot-2017-01-07-at-3.00.00-PM.png 1300w,
+/static/6f4fb57c32322a2be926aea4fce27597/27f8b/Screen-Shot-2017-01-07-at-3.00.00-PM.png 1730w" sizes="(max-width: 650px) 100vw, 650px" style="width: 100%; height: 100%; margin: 0px; vertical-align: middle; position: absolute; top: 0px; left: 0px; opacity: 0;" loading="lazy">
+  </a>
+    </span></p>
+<blockquote>
+<p>My terminal background is dark. Yours might be white or blue or different depending on what you're using. This is simply a personal preference, which we can learn to change later.</p>
+</blockquote>
+<p>Just as I was "in" the <code class="language-text">taniarascia</code> folder in Google Chrome and Finder, I'm currently "in" the same folder via the command prompt/terminal. I'm going to prove this by typing <code class="language-text">pwd</code> into the terminal, then pressing enter. <code class="language-text">pwd</code> stands for <strong>Print Working Directory</strong>, and will show me exactly "where I am" at any point.</p>
+<p>Here's what I type.</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="command-line-prompt"><span data-user="root" data-host="localhost"></span></span><span class="token builtin class-name">pwd</span></code></pre></div>
+<p>And here's what is written (printed) to the screen.</p>
+<div class="gatsby-highlight" data-language="terminal"><pre class="language-terminal"><code class="language-terminal">NolBook:~ taniarascia$ pwd
+/Users/taniarascia</code></pre></div>
+<p><span class="gatsby-resp-image-wrapper" style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; max-width: none;">
+      <a class="gatsby-resp-image-link" href="https://www.taniarascia.com/static/7daeae91172be824eed081f6e8843c68/27f8b/Screen-Shot-2017-01-07-at-3.07.35-PM.png" style="display: block" target="_blank" rel="noopener">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom: 68.09815950920245%; position: relative; bottom: 0; left: 0; background-image: url(&#39;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAABuklEQVQ4y92SW0sCQRSAN6QHRXTfvG/edkXsJaFCLWjwJ/QgISq6Cl4iK+sn+BOE/ky9RK89ZFKiD5ZuKhlou5nrJTtrahJESW8NfJyZM5xvDjODnVwOFx4vz1evShfuav1xq1aroUajATyhWvUB5W9vUKVSQQ8Mg+5KJVSv11Gr1ULNZnMKrN0MwzgymcwiZlx24sfxcHb/KDZMpVKdw8ODbjK5x6cg7ibifCIe7dJ0iPf5fLzf7+eDwSAfiUT4cDg8AuavkHtLp9P3Z6enSxgMxcam63rD5Rw4HGucy7netttX2gSh49RqNafTfUSlUsmpVKpRnAVyLI7jHa/XWy4WixQmkUgUJGnOUhTVA54tFgtntVo5s9k8wmQyTecTSJKcAjUsQRAdmqbL+Xz+Q6jX67NGo7EPsABnMBgE0cssQv5rTgAOYDUaTScUCn0KQZCFzT7A/kbya6HQ4U+C/yO8gs0eCJ+Fe5uHiRD+4rePws2DINRqtaMOC4UChYnF4sm3GYxPbc+DIIUOu4FAoJzL5ShMJBJJ5HL5NpCQyWRRIDYPUBeVSqUJm8224/F4cGw8FgDRHxEc2DvJu4btbEZkyQAAAABJRU5ErkJggg==&#39;); background-size: cover; display: block;"></span>
+  <img class="gatsby-resp-image-image" alt="Screen Shot 2017 01 07 at 3 07 35 PM" title="Screen Shot 2017 01 07 at 3 07 35 PM" src="./Command Line Tutorial_ Usage in Linux and macOS _ Tania Rascia_files/Screen-Shot-2017-01-07-at-3.07.35-PM.png" srcset="/static/7daeae91172be824eed081f6e8843c68/222b7/Screen-Shot-2017-01-07-at-3.07.35-PM.png 163w,
+/static/7daeae91172be824eed081f6e8843c68/ff46a/Screen-Shot-2017-01-07-at-3.07.35-PM.png 325w,
+/static/7daeae91172be824eed081f6e8843c68/a6d36/Screen-Shot-2017-01-07-at-3.07.35-PM.png 650w,
+/static/7daeae91172be824eed081f6e8843c68/e548f/Screen-Shot-2017-01-07-at-3.07.35-PM.png 975w,
+/static/7daeae91172be824eed081f6e8843c68/3c492/Screen-Shot-2017-01-07-at-3.07.35-PM.png 1300w,
+/static/7daeae91172be824eed081f6e8843c68/27f8b/Screen-Shot-2017-01-07-at-3.07.35-PM.png 1730w" sizes="(max-width: 650px) 100vw, 650px" style="width: 100%; height: 100%; margin: 0px; vertical-align: middle; position: absolute; top: 0px; left: 0px; opacity: 0;" loading="lazy">
+  </a>
+    </span></p>
+<p>It wrote <code class="language-text">/Users/taniarascia</code> as my current working directory, where I "am". But how do I know what's there? How do I interact with any of those files and directories? I'm going to use the <code class="language-text">ls</code> command, which stands for <strong>List Directory Contents</strong></p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="command-line-prompt"><span data-user="root" data-host="localhost"></span></span><span class="token function">ls</span></code></pre></div>
+<div class="gatsby-highlight" data-language="terminal"><pre class="language-terminal"><code class="language-terminal">NolBook:~ taniarascia$ ls
+  Desktop   Documents Library   Music     Private   Sites
+  Dev       Downloads Movies    Pictures  Public    Songs</code></pre></div>
+<p>And now I see exactly what I see in Finder and Chrome/a web browser!</p>
+<p>Now you should understand that you're accessing the same files and folders from the command line as you would from any program on the computer. If it doesn't quite make sense yet, just follow along and I promise it will very soon. If you think that's incredibly simple and I spent way too much time explaining it, then you're probably a little brighter than I am.</p>
+<blockquote>
+<p>In programming, <code class="language-text">print</code> means "show on the screen", not to be confused with "send to printer".</p>
+</blockquote>
+<h2 id="understanding-the-syntax" style="position:relative;"><a href="https://www.taniarascia.com/how-to-use-the-command-line-for-apple-macos-and-linux/#understanding-the-syntax" aria-label="understanding the syntax permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Understanding the syntax</h2>
+<p>When I open terminal, I see this.</p>
+<div class="gatsby-highlight" data-language="terminal"><pre class="language-terminal"><code class="language-terminal">NolBook:~ taniarascia$</code></pre></div>
+<p>You'll probably see something else, but the <code class="language-text">~</code> and <code class="language-text">$</code> will remain. Here's what's going on, which you can look back on for reference:</p>
+<div class="gatsby-highlight" data-language="terminal"><pre class="language-terminal"><code class="language-terminal">Computer Name:Directory UsernameREADY</code></pre></div>
+<ul>
+<li><strong>Computer Name</strong> (NolBook) - That's just the name I gave my computer.</li>
+<li><strong>Directory</strong> (<code class="language-text">~</code> ) - Directly next to the computer name is the current directory you're working in. <code class="language-text">~</code> stands for home directory, which is my <code class="language-text">taniarascia</code> folder.</li>
+<li><strong>Username</strong> (taniarascia) - This might be slightly confusing because my home folder AND username are both taniarascia, but this is specifically referring to the computer user.</li>
+<li><strong>READY</strong> (<code class="language-text">$</code>) - A dollar sign signifies that the prompt is ready to accept your command. You do not type the <code class="language-text">$</code>, it's just there. On a Windows computer, this is represented by a <code class="language-text">&gt;</code> symbol.</li>
+</ul>
+<blockquote>
+<p>A terminal or command prompt is a program (command line interface) that runs a shell, which interprets the commands.</p>
+</blockquote>
+<h2 id="commands" style="position:relative;"><a href="https://www.taniarascia.com/how-to-use-the-command-line-for-apple-macos-and-linux/#commands" aria-label="commands permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Commands</h2>
+<p>We're going to learn how to do a lot of the regular things you do on a computer with a mouse or keyboard shortcuts. We're going to move between directories, create files and folders, delete them, move them, copy and paste them, and edit files. You can also press <code class="language-text">clear</code> at any point to wipe all the history and have a clean screen.</p>
+<p>So far, we've learned three things.</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Meaning</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="language-text">pwd</code></td>
+<td><strong>Print Working Directory</strong></td>
+<td>find out where you are</td>
+</tr>
+<tr>
+<td><code class="language-text">ls</code></td>
+<td><strong>List Directory Contents</strong></td>
+<td>see what files and directories are in your current location</td>
+</tr>
+<tr>
+<td><code class="language-text">clear</code></td>
+<td><strong>Clear</strong></td>
+<td>clear the terminal screen</td>
+</tr>
+</tbody>
+</table>
+<p>Always remember to type <code class="language-text">pwd</code> before writing any commands to make sure you know where you are.</p>
+<blockquote>
+<p>By default, if you quit Terminal, you will end up back in your home directory.</p>
+</blockquote>
+<h3 id="moving-between-directories" style="position:relative;"><a href="https://www.taniarascia.com/how-to-use-the-command-line-for-apple-macos-and-linux/#moving-between-directories" aria-label="moving between directories permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving between directories</h3>
+<p>Right now, I'm in my home folder. If I want to move somewhere else, I will use the <code class="language-text">cd</code> command - <strong>Change Directory</strong>. I'm going to move to the <strong>Music</strong> folder, then check my location. Type these commands, and press enter after each one.</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="command-line-prompt"><span data-user="root" data-host="localhost"></span><span data-user="root" data-host="localhost"></span><span data-user="root" data-host="localhost"></span></span><span class="token builtin class-name">cd</span> music
+<span class="token builtin class-name">pwd</span>
+<span class="token function">ls</span></code></pre></div>
+<p>Here is the output.</p>
+<div class="gatsby-highlight" data-language="terminal"><pre class="language-terminal"><code class="language-terminal">NolBook:~ taniarascia$ cd music
+NolBook:music taniarascia$ pwd
+/Users/taniarascia/music
+NolBook:music taniarascia$ ls
+Audio Music Apps GarageBand iTunes</code></pre></div>
+<p>First, I moved to the <strong>Music</strong> folder. The terminal will understand a directory regardless of case, so I can write <strong>music</strong> or <strong>Music</strong>. As you can see, it says <code class="language-text">NolBook:music</code> instead of <code class="language-text">NolBook:~</code>, so I know I'm in a different directory now. I printed out my current location to make sure, then listed the contents.</p>
+<p>That's great, but I don't really want to do anything in the <strong>Music</strong> folder. How do I go back? In the terminal, one dot (<code class="language-text">.</code>) represents the current directory, and two dots (<code class="language-text">..</code>) represents one directory backwards, or closer to the root.</p>
+<p>I want to go back one directory, back into my home folder.</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="command-line-prompt"><span data-user="root" data-host="localhost"></span></span><span class="token builtin class-name">cd</span> <span class="token punctuation">..</span></code></pre></div>
+<div class="gatsby-highlight" data-language="terminal"><pre class="language-terminal"><code class="language-terminal">NolBook:~ taniarascia$</code></pre></div>
+<p>By typing <code class="language-text">cd ..</code> I've told the shell to take me back one directory, and now I'm back in home/<code class="language-text">~</code>. Right now would be a good time to practice moving between directories. <code class="language-text">../..</code> will take you back two directories, and so on.</p>
+<h4 id="spaces-in-directory-and-file-names" style="position:relative;"><a href="https://www.taniarascia.com/how-to-use-the-command-line-for-apple-macos-and-linux/#spaces-in-directory-and-file-names" aria-label="spaces in directory and file names permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Spaces in directory and file names</h4>
+<p>If you try to move into a directory that has a space, you may encounter an issue. For example, in my <strong>Music</strong> folder, there was a directory called <strong>Audio Music Apps</strong>. However, if I try to simply type that..</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="command-line-prompt"><span data-user="root" data-host="localhost"></span></span><span class="token builtin class-name">cd</span> Audio Music Apps</code></pre></div>
+<div class="gatsby-highlight" data-language="terminal"><pre class="language-terminal"><code class="language-terminal">-bash: cd: Audio: No such file or directory</code></pre></div>
+<p>The shell thinks I'm trying to move into <strong>Audio</strong> instead of <strong>Audio Music Apps</strong> because it does not recognize the space. There are two ways to remedy this.</p>
+<h4 id="using-quotations" style="position:relative;"><a href="https://www.taniarascia.com/how-to-use-the-command-line-for-apple-macos-and-linux/#using-quotations" aria-label="using quotations permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using Quotations</h4>
+<p>Wrap any file in double quotes to preserve the spaces.</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="command-line-prompt"><span data-user="root" data-host="localhost"></span></span><span class="token builtin class-name">cd</span> <span class="token string">"Audio Music Apps"</span></code></pre></div>
+<h4 id="escaping" style="position:relative;"><a href="https://www.taniarascia.com/how-to-use-the-command-line-for-apple-macos-and-linux/#escaping" aria-label="escaping permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Escaping</h4>
+<p>Type a backslash <code class="language-text">\</code> character before each space. If you press tab, the Terminal will do this for you! Simply type <code class="language-text">cd A</code> and press tab and the shell will automatically assume what you want to type.</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="command-line-prompt"><span data-user="root" data-host="localhost"></span></span><span class="token builtin class-name">cd</span> Audio<span class="token punctuation">\</span> Music<span class="token punctuation">\</span> Apps/</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Meaning</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="language-text">cd</code></td>
+<td><strong>Change Directory</strong></td>
+<td>move between directories</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>You can end a command at any point by pressing control + C</p>
+</blockquote>
+<h3 id="creating-files-and-directories" style="position:relative;"><a href="https://www.taniarascia.com/how-to-use-the-command-line-for-apple-macos-and-linux/#creating-files-and-directories" aria-label="creating files and directories permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Creating files and directories</h3>
+<p>You can create files and folders from the command line.</p>
+<h4 id="create-directory" style="position:relative;"><a href="https://www.taniarascia.com/how-to-use-the-command-line-for-apple-macos-and-linux/#create-directory" aria-label="create directory permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create directory</h4>
+<p>Let's create a folder for practicing named <strong>Shell</strong> with the <code class="language-text">mkdir</code> (<strong>Make Directory</strong>) command.</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="command-line-prompt"><span data-user="root" data-host="localhost"></span></span><span class="token function">mkdir</span> Shell</code></pre></div>
+<p>Congratulations, you created a directory! If I type <code class="language-text">ls</code>, I'll see my newly created directory in the home folder. I can also see this through Finder.</p>
+<p><span class="gatsby-resp-image-wrapper" style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 274px; max-width: none;">
+      <a class="gatsby-resp-image-link" href="./Command Line Tutorial_ Usage in Linux and macOS _ Tania Rascia_files/Screen-Shot-2017-01-08-at-9.32.13-PM.png" style="display: block" target="_blank" rel="noopener">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom: 184.66257668711657%; position: relative; bottom: 0; left: 0; background-image: url(&#39;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAlCAYAAABCr8kFAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFnElEQVRIx41W2XIaVxDlB/OWh/glyV/4LVV5TCp2UnacB6ecSLJVikXssiS0I4QBLSzCQoAQAoQWEOuwzMrMACfdF4G1IedWdVHDzNy5fU6f0+1QVRUchq6h0lZxWpfRVFS0Wi2KNrrdLnRdF890Oh1YljW61jTtTjhKpRI2PJvo6gq8FwoebTbx9NBAcDeIib8n8ObNG0xNTGB+fg4zb51wOmeRzeXF5oqiYHigYTj4T0mSYBo6ziQZK/kWgpcyarUaTk5OkE6ncZhMIp/PI5FIIhjcRa0uwTCM+0/IKSi0M9BHVe8iLpmoGD00m000Gk2MW71eD/1+/0442u02fP6AeGi7auKRX8bTtIWjoyP863SKtA8PU+J+17bvbHR7ORh0Xv1+D23DRK6hoaQY0On4Q4wsyx57Un7/ejgajQYymSxMXcVhTcVsRkG4YgjMDg7iOD09RaFwgcvLS8TjB8hms8jlcojFYuKeSh++QUqlUoF/awuWpmCrKONbH7Os41M0CuesE9PT09j0uDHvWsK72Vk4385gaWUNb2f+wfLyMmT11oZMCi+bydF0tKkGO8S4ZZkCryEBtm3fk64tysc0zVE4eNeDeFw8EG928WNUxnyxhxylFggEKM04klQ2x6kkQqEIYgcJJA5iCPj9OC9cXuH/mRwHV/3xcUZcpJomHu/U8DpHNUn4+H1+bLjdWF1bRywaxsePAbgWl7G2siz+P0ik7m7Ix+Rl0W+bU6Yw6CP2VYk8tPp0nwuc0x6Go1wuw+P1wiZSfEUV33kbeHGoInWUxvrqClwLC1hYcNGpVuD2eFEsFoUiZFm+X3psAoVCkcpGQ6Ym41W8jtUzGWdnp4jt75Pc4giHwtiLRBDZi6JarYlTjTUHLkbBIOHQNGwUZBOqaY9SGOLzWQB9AcW4ENLz+nwD6dUsfLUm4UnaRuxTFK/+fInlVTc8m14hQ44qGcNtIm5Ij08napEekDQToWIbmcaAmEZDQrlcAaupWqkSDGfkhcaDpxxgWBxgmJM0bF6oOJJ0ITWWWLsto05WxuR1OuaD+AkM+cHNK5b9BRlfb0j4OWlgd2cLfzx/hvcfXJiaeo0JMtlMNic2vI/dEcvX67BFuiy1VEiyKmDgFPg+w8IEsWcydPzf9dq7UYdCKZmBUo7aXbxIUD3W+jjJZbFNppE/OyclHUOq18kj0wLHztUh7uPlhpb36ya+d5fx+6GGPNl/hOzev7WL9bU1gmAHH+bmsbjoQk1qjGXaMXQRTlEzOtDoxBa5zbDuhr/XDfW6u9wO4YeBrW3YOvuhgsdRFTNnNkK7u5ijE/n8W9gO+LFGMmQf5DJimMYRIxybMWTHTlZkPEu08T6vEoYnoq8kEgl8pCoI+H1YXd9AqVQelc69G45SuuopkmoIc2UIuve4Dfee233kRk/53PX6CNZtUYfPsz0Ed7ax5FqEa2kZf716ifnFRZxfFB+UnSBF9GVFFRdl1cTSSQvh8mDs0Ek9aSoZNltWU6PZerAni748mBwa6NDLhZaGWFVHUe6gRNLLUBswTUtMFow1VwTLi0kZF2K2Wd/YELON51wWjf6XVAfh4A4mJycxTd3tya9PsbcfJTVZwljHESJIYcb4yyalyJI7riu4aKpQ6EUeR/i3SubAX+dnvxQOxoodm1de6VLJ6Ii3+qiQaaSPUjgl6VUq5av552FCBCmMYSgcFheRuoVvPBJ+o9kmlYzDRSPch7lFvJ6aRIqmsP+14VB6PAipZJ5NWYFBwF+X3PU9WF5cGePCUa1WEaYGxKNIhMrlp4SG+QK1ACLBve7GXvQTonsRMZokaQobN2iOSKmTLbHbWCS9vcs2fthrYSqrUcoJ0UJX1j2Ye/+O0p7C9m7oyxsOU+PUeb6xTZqjKfo35NYfjXSclnh2TPwHq5PKcXFu0VYAAAAASUVORK5CYII=&#39;); background-size: cover; display: block;"></span>
+  <img class="gatsby-resp-image-image" alt="Screen Shot 2017 01 08 at 9 32 13 PM" title="Screen Shot 2017 01 08 at 9 32 13 PM" src="./Command Line Tutorial_ Usage in Linux and macOS _ Tania Rascia_files/Screen-Shot-2017-01-08-at-9.32.13-PM.png" srcset="/static/7bf46cba34c76a6fab4e4ce783d35310/222b7/Screen-Shot-2017-01-08-at-9.32.13-PM.png 163w,
+/static/7bf46cba34c76a6fab4e4ce783d35310/d3fa7/Screen-Shot-2017-01-08-at-9.32.13-PM.png 274w" sizes="(max-width: 274px) 100vw, 274px" style="width: 100%; height: 100%; margin: 0px; vertical-align: middle; position: absolute; top: 0px; left: 0px; opacity: 0;" loading="lazy">
+  </a>
+    </span></p>
+<p>Now you can move into the <strong>Shell</strong> directory by inputting <code class="language-text">cd shell</code>.</p>
+<div class="gatsby-highlight" data-language="terminal"><pre class="language-terminal"><code class="language-terminal">NolBook:~ taniarascia$ cd shell
+NolBook:shell taniarascia$ pwd
+/Users/taniarascia/shell</code></pre></div>
+<h4 id="create-file" style="position:relative;"><a href="https://www.taniarascia.com/how-to-use-the-command-line-for-apple-macos-and-linux/#create-file" aria-label="create file permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create file</h4>
+<p>Now let's make a file. You can do this with the <code class="language-text">touch</code> command. I imagine it as Merlin tapping a wand and creating something out of thin air.</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="command-line-prompt"><span data-user="root" data-host="localhost"></span></span><span class="token function">touch</span> test.html</code></pre></div>
+<p>I'm not very unique with my example names, so I just called it <strong>test.html</strong>. When you input this code, it won't output anything to signify that the command was successful. You can <code class="language-text">ls</code> to see it, or check in Finder that you have created a valid .html file.</p>
+<p>You can create any sort of file, but it likely only makes sense to create text based files through terminal.</p>
+<p>You can also create multiple files at the same time.</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="command-line-prompt"><span data-user="root" data-host="localhost"></span></span><span class="token function">touch</span> one.txt two.txt three.txt</code></pre></div>
+<h4 id="write-text-to-a-file" style="position:relative;"><a href="https://www.taniarascia.com/how-to-use-the-command-line-for-apple-macos-and-linux/#write-text-to-a-file" aria-label="write text to a file permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Write text to a file</h4>
+<p>We used <code class="language-text">touch</code> to create an empty file, but we can even create a file on the fly with some content using <code class="language-text">echo</code>.</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="command-line-prompt"><span data-user="root" data-host="localhost"></span></span><span class="token builtin class-name">echo</span> <span class="token string">"Hello World"</span> <span class="token operator">&gt;</span> hello.txt</code></pre></div>
+<p>Now I have a plain text file called <strong>hello.txt</strong> that contains the contents <code class="language-text">Hello World</code>.</p>
+<h4 id="view-contents-of-a-file" style="position:relative;"><a href="https://www.taniarascia.com/how-to-use-the-command-line-for-apple-macos-and-linux/#view-contents-of-a-file" aria-label="view contents of a file permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>View contents of a file</h4>
+<p>I can check this by opening it from Finder, but I can also see the contents through Terminal with the <code class="language-text">cat</code> command.</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="command-line-prompt"><span data-user="root" data-host="localhost"></span></span><span class="token function">cat</span> hello.txt</code></pre></div>
+<div class="gatsby-highlight" data-language="terminal"><pre class="language-terminal"><code class="language-terminal">NolBook:shell taniarascia$ cat hello.txt
+Hello World</code></pre></div>
+<p>At this point, I would recommend creating some more files and directories and moving between them to get more familiarized with the commands.</p>
+<blockquote>
+<p>These commands - <code class="language-text">touch</code>, <code class="language-text">cat</code>, and <code class="language-text">echo</code> - can do much more than what I've shown in these quick examples.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Meaning</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="language-text">mkdir</code></td>
+<td><strong>Make Directory</strong></td>
+<td>create a new directory</td>
+</tr>
+<tr>
+<td><code class="language-text">touch</code></td>
+<td><strong>Touch</strong></td>
+<td>create a new file</td>
+</tr>
+<tr>
+<td><code class="language-text">cat</code></td>
+<td><strong>Concatenate</strong></td>
+<td>view the contents of a file</td>
+</tr>
+<tr>
+<td><code class="language-text">echo "x" &gt;</code></td>
+<td><strong>Echo</strong></td>
+<td>quickly print text to a file</td>
+</tr>
+</tbody>
+</table>
+<h3 id="deleting-files-and-directories" style="position:relative;"><a href="https://www.taniarascia.com/how-to-use-the-command-line-for-apple-macos-and-linux/#deleting-files-and-directories" aria-label="deleting files and directories permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deleting files and directories</h3>
+<p>Now hopefully you've make a big mess of files and directories in your testing folder, so we can start cleaning it up.</p>
+<h4 id="delete-a-file" style="position:relative;"><a href="https://www.taniarascia.com/how-to-use-the-command-line-for-apple-macos-and-linux/#delete-a-file" aria-label="delete a file permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Delete a file</h4>
+<p>Use the <code class="language-text">rm</code> (<strong>Remove</strong>) command to remove a file.</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="command-line-prompt"><span data-user="root" data-host="localhost"></span></span><span class="token function">rm</span> hello.txt</code></pre></div>
+<p>Note that this will permanently delete the file - it won't send to the Trash/Recycling bin.</p>
+<blockquote>
+<p>The asterisk (<code class="language-text">*</code>) is known as a wildcard in programming. I can choose to delete all the files of a certain filetype with a wildcard. For example, if I saved many .png files as .jpg, I could run <code class="language-text">rm *.png</code> to batch delete the whole set of .png files.</p>
+</blockquote>
+<h4 id="delete-a-directory" style="position:relative;"><a href="https://www.taniarascia.com/how-to-use-the-command-line-for-apple-macos-and-linux/#delete-a-directory" aria-label="delete a directory permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Delete a directory</h4>
+<p>Now, let's say you create a new directory called <strong>goodbye</strong> with <code class="language-text">mkdir goodbye</code>, and you try to delete it with <code class="language-text">rm goodbye</code>. You'll get this error.</p>
+<div class="gatsby-highlight" data-language="terminal"><pre class="language-terminal"><code class="language-terminal">NolBook:shell taniarascia$ rm goodbye
+rm: goodbye: is a directory</code></pre></div>
+<p>No problem, we'll just delete it with <code class="language-text">rmdir</code> (<strong>Remove Directory</strong>).</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="command-line-prompt"><span data-user="root" data-host="localhost"></span></span><span class="token function">rmdir</span> goodbye</code></pre></div>
+<p>And now it's gone. If you want to remove a folder that has files in it, you'll have to run a slightly different command.</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="command-line-prompt"><span data-user="root" data-host="localhost"></span></span><span class="token function">rm</span> -r goodbye</code></pre></div>
+<p>Just like with <code class="language-text">touch</code>, we can remove multiple files or folders at the same time.</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="command-line-prompt"><span data-user="root" data-host="localhost"></span></span><span class="token function">rm</span> one.txt two.txt three.txt</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Meaning</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="language-text">rm</code></td>
+<td><strong>Remove</strong></td>
+<td>remove directory entries</td>
+</tr>
+<tr>
+<td><code class="language-text">rmdir</code></td>
+<td><strong>Remove Directory</strong></td>
+<td>remove directories</td>
+</tr>
+</tbody>
+</table>
+<h3 id="copying-files-and-directories" style="position:relative;"><a href="https://www.taniarascia.com/how-to-use-the-command-line-for-apple-macos-and-linux/#copying-files-and-directories" aria-label="copying files and directories permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Copying files and directories</h3>
+<p>We can also copy and paste files through the command line with the <code class="language-text">cp</code> (<strong>Copy</strong>) command. Simply type <code class="language-text">cp</code> followed by the source (file you want to copy) and destination (place you want to copy it to).</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="command-line-prompt"><span data-user="root" data-host="localhost"></span></span><span class="token function">cp</span> <span class="token builtin class-name">source</span> destination</code></pre></div>
+<p>I'm in my <strong>Shell</strong> folder. Let's say I make a new directory called <strong>websites</strong> with <code class="language-text">mkdir websites</code>. Now I can copy my <code class="language-text">test.html</code> from <code class="language-text">/Users/taniarascia/shell</code> to <code class="language-text">/Users/taniarascia/shell/websites</code>.</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="command-line-prompt"><span data-user="root" data-host="localhost"></span></span><span class="token function">cp</span> test.html websites</code></pre></div>
+<p>This is the same as copying and pasting (command + C).</p>
+<p>To copy an entire directory, use the <code class="language-text">-R</code> option. I can copy the <strong>websites</strong> directory and all of it's contents to a new directory.</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="command-line-prompt"><span data-user="root" data-host="localhost"></span></span><span class="token function">cp</span> -R websites websites2</code></pre></div>
+<h4 id="duplicating-a-file" style="position:relative;"><a href="https://www.taniarascia.com/how-to-use-the-command-line-for-apple-macos-and-linux/#duplicating-a-file" aria-label="duplicating a file permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Duplicating a file</h4>
+<p>You can also duplicate a file in the same folder.</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="command-line-prompt"><span data-user="root" data-host="localhost"></span></span><span class="token function">cp</span> test.html test2.html</code></pre></div>
+<h3 id="moving-files-and-directories" style="position:relative;"><a href="https://www.taniarascia.com/how-to-use-the-command-line-for-apple-macos-and-linux/#moving-files-and-directories" aria-label="moving files and directories permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving files and directories</h3>
+<p>You can move files just as you copy them with the <code class="language-text">mv</code> (<strong>Move</strong>) command.</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="command-line-prompt"><span data-user="root" data-host="localhost"></span></span><span class="token function">mv</span> <span class="token builtin class-name">source</span> destination</code></pre></div>
+<p>This is similar to cutting and pasting (command + X).</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Meaning</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="language-text">cp</code></td>
+<td><strong>Copy</strong></td>
+<td>copy files</td>
+</tr>
+<tr>
+<td><code class="language-text">cp -R</code></td>
+<td><strong>Copy Recursively</strong></td>
+<td>copy a directory and all its contents</td>
+</tr>
+<tr>
+<td><code class="language-text">mv</code></td>
+<td><strong>Move</strong></td>
+<td>move (cut and paste) files and directories</td>
+</tr>
+</tbody>
+</table>
+<h3 id="running-multiple-commands" style="position:relative;"><a href="https://www.taniarascia.com/how-to-use-the-command-line-for-apple-macos-and-linux/#running-multiple-commands" aria-label="running multiple commands permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Running multiple commands</h3>
+<p>We can run multiple commands with the double ampersand (<code class="language-text">&amp;&amp;</code>) operator. As long as the first command is successful, the subsequent one will run.</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="command-line-prompt"><span data-user="root" data-host="localhost"></span></span><span class="token function">touch</span> newfile.txt <span class="token operator">&amp;&amp;</span> <span class="token function">mv</span> newfile.txt websites</code></pre></div>
+<p>I just created a new file and moved it to a different directory with one command.</p>
+<h3 id="changing-permissions" style="position:relative;"><a href="https://www.taniarascia.com/how-to-use-the-command-line-for-apple-macos-and-linux/#changing-permissions" aria-label="changing permissions permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Changing permissions</h3>
+<p>File permissions aren't often taken into consideration when you're a casual Windows or Mac user, but if you've ever worked on a web server you likely have experience with permissions. You can change permissions with the <code class="language-text">chmod</code> (<strong>Change Mode</strong>) command.</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="command-line-prompt"><span data-user="root" data-host="localhost"></span></span><span class="token function">chmod</span> <span class="token number">644</span> test.html</code></pre></div>
+<p>I've given <code class="language-text">644</code> (read and write by owner) permissions to test.html, a common permission for files.</p>
+<h3 id="run-as-administrator" style="position:relative;"><a href="https://www.taniarascia.com/how-to-use-the-command-line-for-apple-macos-and-linux/#run-as-administrator" aria-label="run as administrator permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Run as administrator</h3>
+<p><span class="gatsby-resp-image-wrapper" style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 360px; max-width: none;">
+      <a class="gatsby-resp-image-link" href="./Command Line Tutorial_ Usage in Linux and macOS _ Tania Rascia_files/sandwich.png" style="display: block" target="_blank" rel="noopener">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom: 82.82208588957054%; position: relative; bottom: 0; left: 0; background-image: url(&#39;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAIAAABSJhvpAAAACXBIWXMAAAsTAAALEwEAmpwYAAABtElEQVQ4y4WTSWsCQRCF5/+fvHsRb4KCIIoLKoqKK26oGDUTFVdwNy7jknxOJ83YSFKHoru6Xr3q19VasVgcDAYfpum6/m6abrFut/v2bO12u9frFQoFbb1eT6dTALPZbD6f49emrVYr/Ha7PZ1OX892v9/xJGjL5ZJKkUgkGAzmcrlMJlOtVqPRaDwej8ViiUQCKgm4/xrrxWLxAMszaMVCIeFGgUAgmUy2Wq1Go0Hpfr+/2Ww02GVSp9ORDMLfbjcR9/v94MPhsMvlstls2Wx2t9s9mM/n8/F4vFwuMBuGwfbTNMlPBB6UQ1rUgVzoohFNpVLUC4VClHc4HD6fDwav16t0vt/vVcFgQJJ8Pu/xeNAMj1TIdr1eZSqCw0NrIiLu8qM2G6rSGxlgDNNEhkhFdrfbXalUrEI8wFbBuDMPK7fSJpMJs/CibQEWxZamKWDuNRqNrBEVLPaoD7kVzKJcLqOwJHgBFmfpdJpJsEqFJ8gIKhVV8OFwKJVKdru92WxaR4UnrNVq/4CRihng2ZxO53g8lkmy7b/AdMtjDIfDer3OwEl5xA/7C6y8jfI3Xv4WgN/947Nr7urs9wAAAABJRU5ErkJggg==&#39;); background-size: cover; display: block;"></span>
+  <img class="gatsby-resp-image-image" alt="sandwich" title="sandwich" src="./Command Line Tutorial_ Usage in Linux and macOS _ Tania Rascia_files/sandwich.png" srcset="/static/5e50e3c0ee4bb967610271e4e43862c3/222b7/sandwich.png 163w,
+/static/5e50e3c0ee4bb967610271e4e43862c3/ff46a/sandwich.png 325w,
+/static/5e50e3c0ee4bb967610271e4e43862c3/f21e7/sandwich.png 360w" sizes="(max-width: 360px) 100vw, 360px" style="width: 100%; height: 100%; margin: 0px; vertical-align: middle; position: absolute; top: 0px; left: 0px; opacity: 0;" loading="lazy">
+  </a>
+    </span></p>
+<p>The term <code class="language-text">sudo</code> stands for Super User Do. You might encounter a situation in which the current user you're logged in as does not have sufficient permissions to perform a task. You can precede a command with <code class="language-text">sudo</code> to run the command as administrator, as long as you have the admin password. When you type the password, it will <em>not</em> show any asterisks to indicate that you've typed anything.</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="command-line-prompt"><span data-user="root" data-host="localhost"></span></span><span class="token function">sudo</span> <span class="token function">chmod</span> <span class="token number">775</span> directory</code></pre></div>
+<p>You can also switch to the administrator user. This is not something you should do often, but it's useful to know. At times you will need to be logged in as admin to move between restricted directories.</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="command-line-prompt"><span data-user="root" data-host="localhost"></span></span><span class="token function">sudo</span> <span class="token function">su</span></code></pre></div>
+<p>Now my terminal looks different - it has a <code class="language-text">#</code> instead of a <code class="language-text">$</code> to indicate that I'm logged in as the super user.</p>
+<div class="gatsby-highlight" data-language="terminal"><pre class="language-terminal"><code class="language-terminal">sh-3.2#</code></pre></div>
+<p>Since I don't really want to be logged in as admin, I'm going to <code class="language-text">exit</code>, which will return me to my regular user account.</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="command-line-prompt"><span data-user="root" data-host="localhost"></span></span><span class="token builtin class-name">exit</span></code></pre></div>
+<h3 id="connecting-to-another-computer-or-server" style="position:relative;"><a href="https://www.taniarascia.com/how-to-use-the-command-line-for-apple-macos-and-linux/#connecting-to-another-computer-or-server" aria-label="connecting to another computer or server permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Connecting to another computer or server</h3>
+<p>If you're a web developer or designer, you'll be familiar with connecting to a web server via FTP or SFTP. You can achieve a secure connection via the command line with <code class="language-text">ssh</code> (<strong>Secure SHell</strong>).</p>
+<p>You connect to the server with the same information you'd use to connect via a GUI like FileZilla or Transmit.</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="command-line-prompt"><span data-user="root" data-host="localhost"></span></span><span class="token function">ssh</span> username@host</code></pre></div>
+<p>Once you've entered your password, you are now "inside" the other server. Your console will most likely look something like this:</p>
+<div class="gatsby-highlight" data-language="terminal"><pre class="language-terminal"><code class="language-terminal">[username@host ~]$</code></pre></div>
+<p>All the commands we've already learned will work on your web host as well. You can exit the server and return to your own computer with the <code class="language-text">exit</code> command.</p>
+<h3 id="a-few-useful-commands" style="position:relative;"><a href="https://www.taniarascia.com/how-to-use-the-command-line-for-apple-macos-and-linux/#a-few-useful-commands" aria-label="a few useful commands permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>A few useful commands</h3>
+<p>Sometimes, when I'm having an existential crisis, I turn to my computer to bring me back to reality.</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="command-line-prompt"><span data-user="root" data-host="localhost"></span></span><span class="token function">whoami</span></code></pre></div>
+<div class="gatsby-highlight" data-language="terminal"><pre class="language-terminal"><code class="language-terminal">NolBook:~ taniarascia$ whoami
+taniarascia</code></pre></div>
+<p>I often need to check the IP address of a given domain when I'm migrating a website. I can do this with the <code class="language-text">dig</code> (<strong>DNS Lookup</strong>) command.</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="command-line-prompt"><span data-user="root" data-host="localhost"></span></span><span class="token function">dig</span> google.com</code></pre></div>
+<div class="gatsby-highlight" data-language="terminal"><pre class="language-terminal"><code class="language-terminal">;; QUESTION SECTION:
+;google.com.			IN	A
+
+;; ANSWER SECTION:
+google.com.		279	IN	A	216.58.192.238</code></pre></div>
+<p>If I forget something, I can also check the help guide for the command line with <code class="language-text">man</code> (<strong>Manual</strong>).</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="command-line-prompt"><span data-user="root" data-host="localhost"></span></span><span class="token function">man</span> <span class="token function">touch</span></code></pre></div>
+<div class="gatsby-highlight" data-language="terminal"><pre class="language-terminal"><code class="language-terminal">NAME
+touch -- change file access and modification times</code></pre></div>
+<p>To exit the manual pages, simply press q.</p>
+<h2 id="using-a-basic-text-editor" style="position:relative;"><a href="https://www.taniarascia.com/how-to-use-the-command-line-for-apple-macos-and-linux/#using-a-basic-text-editor" aria-label="using a basic text editor permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using a basic text editor</h2>
+<p>You may have heard of programs such as Vim or Emacs. These are Terminal-based text editors. Both of these programs have a bit of a learning curve. Most (if not all) Macs and Linux-based computers come with a program installed called <strong>Nano</strong>, which is a very simple text editor.</p>
+<p>I can use the <code class="language-text">nano</code> command to open a file with <strong>Nano</strong>.</p>
+<p>First, I'll create a new file.</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="command-line-prompt"><span data-user="root" data-host="localhost"></span></span><span class="token function">touch</span> index.html</code></pre></div>
+<p>Then I'll edit it with <code class="language-text">nano</code>.</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="command-line-prompt"><span data-user="root" data-host="localhost"></span></span><span class="token function">nano</span> index.html</code></pre></div>
+<p>Now my Terminal screen will look something like this.</p>
+<p><span class="gatsby-resp-image-wrapper" style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; max-width: none;">
+      <a class="gatsby-resp-image-link" href="https://www.taniarascia.com/static/ef232b73349904ae50bcd92664b3170a/27f8b/Screen-Shot-2017-01-09-at-12.20.29-AM.png" style="display: block" target="_blank" rel="noopener">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom: 66.25766871165644%; position: relative; bottom: 0; left: 0; background-image: url(&#39;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB1UlEQVQ4y2P4//8hw5U9WwIuXdndfPPeraqH9+/WPHx4r+bxo/s1V2/dqrl48ULNxQvnas6fP1tz7erlmhvXr9Y8Aso/fADFD+9VA3EjUD72////DAwgIiM5flN2dvL/rOz0/4UFuf/LSgvBOB/IzsxM+5+elvw/Jzvjf3FRHhiXlhQCcQEYg9QVFeb+nzpl8rnzF2+yMwABo6KS0iopKem/EuIS7yQkJD6CsDiUlpSUhGN0Oaj8eyEhoV8lJSVHgI7jAhsoLy+/WkVF5T8QfwLir6RgNTW1T0D9fysqKo7BDVRQUFitrKz8X0lJ6ROQ/koKBjlCVlYW1UCQC0eYgWhh+IUUDDOwvLwcYSBQYBUw6YAM/KCgoPhZUVHxM5D9GWgRmA3CyGxkDFT3Eaj/d2Vl5VGYgQxenm4brK0t/+toa/90dXX6a25m+ldPT/ePt5f7X0NDg782NlZ/nJwc/hoZGfx1cXb8a2Vl8VdfX++vs7PDH2sri9/Kykr/i4uLT8MMZNLW0nCXk5MtEhAQyFNVVc6Xk5PJFxERydPSVM+XlpbKl5GRzlNTU8mXlZHOV1FWzFdSUgCJ5SsrKYJwnoiIcKGRkVEgELAxZGUkM0ABE4UYDAAhaXok1qhhTgAAAABJRU5ErkJggg==&#39;); background-size: cover; display: block;"></span>
+  <img class="gatsby-resp-image-image" alt="Screen Shot 2017 01 09 at 12 20 29 AM" title="Screen Shot 2017 01 09 at 12 20 29 AM" src="./Command Line Tutorial_ Usage in Linux and macOS _ Tania Rascia_files/Screen-Shot-2017-01-09-at-12.20.29-AM.png" srcset="/static/ef232b73349904ae50bcd92664b3170a/222b7/Screen-Shot-2017-01-09-at-12.20.29-AM.png 163w,
+/static/ef232b73349904ae50bcd92664b3170a/ff46a/Screen-Shot-2017-01-09-at-12.20.29-AM.png 325w,
+/static/ef232b73349904ae50bcd92664b3170a/a6d36/Screen-Shot-2017-01-09-at-12.20.29-AM.png 650w,
+/static/ef232b73349904ae50bcd92664b3170a/e548f/Screen-Shot-2017-01-09-at-12.20.29-AM.png 975w,
+/static/ef232b73349904ae50bcd92664b3170a/3c492/Screen-Shot-2017-01-09-at-12.20.29-AM.png 1300w,
+/static/ef232b73349904ae50bcd92664b3170a/27f8b/Screen-Shot-2017-01-09-at-12.20.29-AM.png 1730w" sizes="(max-width: 650px) 100vw, 650px" style="width: 100%; height: 100%; margin: 0px; vertical-align: middle; position: absolute; top: 0px; left: 0px; opacity: 0;" loading="lazy">
+  </a>
+    </span></p>
+<p>At the top, I can see what file I'm editing (<strong>index.html</strong>) and at the bottom are the various commands I can do. <code class="language-text">^</code> stands for control. You won't be able to use your mouse to move around or do anything except copy the contents of the file.</p>
+<p>So I'll just type something unique.</p>
+<p><span class="gatsby-resp-image-wrapper" style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; max-width: none;">
+      <a class="gatsby-resp-image-link" href="https://www.taniarascia.com/static/4b915dbc3da969104110ed4bbe757574/27f8b/Screen-Shot-2017-01-09-at-12.24.39-AM.png" style="display: block" target="_blank" rel="noopener">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom: 66.25766871165644%; position: relative; bottom: 0; left: 0; background-image: url(&#39;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACPklEQVQ4y6WSTW8SQRiAtz1o4om0JILLLvtVuoAslIhWaAwFKxEv+gN6sZHS0uyUAgK6F+M/MP0VbQ/GeDIe1YuRj1SsoQJSf0Bl6R5qWceZDSgmttX4Js/Om3lnnn13dgh4uEO8f/n8dmX7xeN6a/dBu9VQ9tpN5cteS6nV60q1WlGqlZJSLr9TPtS2lY87NaPe/tw0xmZj92HjU/1RuVyahxASBH4s3p1/JssJmFy6B1dBCuayqwYArMDlpQRcTCzAlVQSZtZkg1w2bdTv59IQyCmjvr7+pFTbaZ0lUIywHLshSdJ3hrHv0xSlUgg7Tas2kuxYLJaO1Wo1wDnmfH/s1/bHxsa/ZbPZV6i5c1hICAK/NRu+BgOBS12vV9Kmpnya5PFoojipCYJwIg6HQ7Xb7XqhUHgzEI44neJWPB6DPp9XFUVRc7tdaDGvsSx7wPO8xnGcMf4JJMVf9LsQdyhJHoiLWDIsOEl2rJCm6U2GYSDarA4vPk12rBCdwSYqQoT6N5JThag7Q9jv8OBfGAjz+fwvIZrYYDkOC78yDNtF59hFeRe9yMgxw/kwaF0H7T8qFouvf16b+M0bT0Ohq/Ci2304NxfRr1wO6Ogn9W7FYzq6QvrMTLAXiYR1v9+nX4/O6sHgtI6ulx6Nhnuh4PQRz3Mwk8m8HQhH3S4xRtPUmslkkicmeEBTNmA2m2WXcxKQ5AVgs5GywyEAykYCgWcBxzF4DvAci5HN5vG03++/g+IMsZxcIPox+p8Y8QOL8nxNzq5udwAAAABJRU5ErkJggg==&#39;); background-size: cover; display: block;"></span>
+  <img class="gatsby-resp-image-image" alt="Screen Shot 2017 01 09 at 12 24 39 AM" title="Screen Shot 2017 01 09 at 12 24 39 AM" src="./Command Line Tutorial_ Usage in Linux and macOS _ Tania Rascia_files/Screen-Shot-2017-01-09-at-12.24.39-AM.png" srcset="/static/4b915dbc3da969104110ed4bbe757574/222b7/Screen-Shot-2017-01-09-at-12.24.39-AM.png 163w,
+/static/4b915dbc3da969104110ed4bbe757574/ff46a/Screen-Shot-2017-01-09-at-12.24.39-AM.png 325w,
+/static/4b915dbc3da969104110ed4bbe757574/a6d36/Screen-Shot-2017-01-09-at-12.24.39-AM.png 650w,
+/static/4b915dbc3da969104110ed4bbe757574/e548f/Screen-Shot-2017-01-09-at-12.24.39-AM.png 975w,
+/static/4b915dbc3da969104110ed4bbe757574/3c492/Screen-Shot-2017-01-09-at-12.24.39-AM.png 1300w,
+/static/4b915dbc3da969104110ed4bbe757574/27f8b/Screen-Shot-2017-01-09-at-12.24.39-AM.png 1730w" sizes="(max-width: 650px) 100vw, 650px" style="width: 100%; height: 100%; margin: 0px; vertical-align: middle; position: absolute; top: 0px; left: 0px; opacity: 0;" loading="lazy">
+  </a>
+    </span></p>
+<p>Now to save my file, I'll press control + O (the letter), and enter to confirm. I can exit <strong>Nano</strong> at this point by typing control + X, and I'll be back where I started.</p>
+<p>Now I can check the contents of <strong>index.html</strong> with <code class="language-text">cat</code> to make sure it all worked properly.</p>
+<div class="gatsby-highlight" data-language="terminal"><pre class="language-terminal"><code class="language-terminal">NolBook:shell taniarascia$ cat index.html
+  &lt;html&gt;
+    &lt;head&gt;
+      &lt;title&gt;Hello, World!&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;h1&gt;Hello, World!&lt;/h1&gt;
+    &lt;/body&gt;
+  &lt;/html&gt;</code></pre></div>
+<h2 id="recap" style="position:relative;"><a href="https://www.taniarascia.com/how-to-use-the-command-line-for-apple-macos-and-linux/#recap" aria-label="recap permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Recap</h2>
+<p>Here's a recap of all the commands I went over today.</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Meaning</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="language-text">pwd</code></td>
+<td><strong>Print Working Directory</strong></td>
+<td>find out where you are</td>
+</tr>
+<tr>
+<td><code class="language-text">ls</code></td>
+<td><strong>List Directory Contents</strong></td>
+<td>see what files and directories are in your current location</td>
+</tr>
+<tr>
+<td><code class="language-text">clear</code></td>
+<td><strong>Clear</strong></td>
+<td>clear the terminal screen</td>
+</tr>
+<tr>
+<td><code class="language-text">cd</code></td>
+<td><strong>Change Directory</strong></td>
+<td>move between directories</td>
+</tr>
+<tr>
+<td><code class="language-text">mkdir</code></td>
+<td><strong>Make Directory</strong></td>
+<td>create a new directory</td>
+</tr>
+<tr>
+<td><code class="language-text">touch</code></td>
+<td><strong>Touch</strong></td>
+<td>create a new file</td>
+</tr>
+<tr>
+<td><code class="language-text">cat</code></td>
+<td><strong>Concatenate</strong></td>
+<td>view the contents of a file</td>
+</tr>
+<tr>
+<td><code class="language-text">echo "x" &gt;</code></td>
+<td><strong>Echo</strong></td>
+<td>quickly print text to a file</td>
+</tr>
+<tr>
+<td><code class="language-text">rm</code></td>
+<td><strong>Remove</strong></td>
+<td>remove directory entries</td>
+</tr>
+<tr>
+<td><code class="language-text">rmdir</code></td>
+<td><strong>Remove Directory</strong></td>
+<td>remove directories</td>
+</tr>
+<tr>
+<td><code class="language-text">cp</code></td>
+<td><strong>Copy</strong></td>
+<td>copy files</td>
+</tr>
+<tr>
+<td><code class="language-text">cp -R</code></td>
+<td><strong>Copy Recursively</strong></td>
+<td>copy a directory and all its contents</td>
+</tr>
+<tr>
+<td><code class="language-text">mv</code></td>
+<td><strong>Move</strong></td>
+<td>move (cut and paste) files and directories</td>
+</tr>
+<tr>
+<td><code class="language-text">&amp;&amp;</code></td>
+<td><strong>And</strong></td>
+<td>run multiple commands</td>
+</tr>
+<tr>
+<td><code class="language-text">whoami</code></td>
+<td><strong>Who Am I</strong></td>
+<td>display current user id</td>
+</tr>
+<tr>
+<td><code class="language-text">dig</code></td>
+<td><strong>Dig</strong></td>
+<td>DNS lookup</td>
+</tr>
+<tr>
+<td><code class="language-text">man</code></td>
+<td><strong>Manual</strong></td>
+<td>open manual (help) pages</td>
+</tr>
+<tr>
+<td><code class="language-text">nano</code></td>
+<td><strong>Nano's ANOther editor</strong></td>
+<td>free text editing program</td>
+</tr>
+</tbody>
+</table>
+<h2 id="conclusion" style="position:relative;"><a href="https://www.taniarascia.com/how-to-use-the-command-line-for-apple-macos-and-linux/#conclusion" aria-label="conclusion permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Conclusion</h2>
+<p>Now that you know how to use the command line, you can do a few things like...</p>
+<ul>
+<li><a href="https://www.taniarascia.com/learn-sass-now/">Run Sass from the command line</a></li>
+<li><a href="https://www.taniarascia.com/getting-started-with-gulp/">Set up a workflow with Gulp</a></li>
+<li><a href="https://www.taniarascia.com/getting-started-with-grunt-and-sass/">Or Grunt</a></li>
+<li><a href="https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/">Download all your programs with a single command</a></li>
+<li><a href="https://www.taniarascia.com/getting-started-with-aws-setting-up-a-virtual-server/">Set up a Linux server (AWS)</a></li>
+<li><a href="https://www.taniarascia.com/setting-up-a-basic-cron-job-in-linux/">Set up a cron job</a></li>
+</ul>
+<p>and plenty more. There are no more limits! Have fun.</p></div></div></article><section class="blurb"><div class="container"><div><h1>About the author</h1><p>Hey, I'm <a href="https://www.taniarascia.com/me">Tania</a>, a software engineer, writer, and open-sourcerer. I publish articles and tutorials about modern JavaScript, design, and programming.</p><p><a class="button" href="https://taniarascia.substack.com/" target="_blank" rel="noreferrer">Get the newsletter</a><a class="button" href="https://ko-fi.com/taniarascia" target="_blank" rel="noreferrer">Buy me a coffee</a></p></div><div><img src="./Command Line Tutorial_ Usage in Linux and macOS _ Tania Rascia_files/tania2020small-2e26928e592931dfb9698970daff8edc.jpg" alt="Tania" class="avatar"></div></div></section><div class="container"><div id="comments"><h2>Comments</h2><div class="comments"><div class="utterances" style="height: 1458px;">
+    <iframe class="utterances-frame" title="Comments" scrolling="no" src="./Command Line Tutorial_ Usage in Linux and macOS _ Tania Rascia_files/utterances.html" loading="lazy"></iframe>
+  </div></div></div><nav class="flex container suggested"><a rel="prev" href="https://www.taniarascia.com/2016-into-2017/"><span>Previous</span>2016 into 2017</a><a rel="next" href="https://www.taniarascia.com/how-to-use-json-data-with-php-or-javascript/"><span>Next</span>JSON Tutorial: Request API Data with JavaScript or PHP</a></nav></div></main><footer class="footer flex"><section class="container"><nav class="footer-links"><a href="https://www.taniarascia.com/blog">Blog</a><a href="https://www.taniarascia.com/guides">Guides</a><a href="https://taniarascia.substack.com/subscribe" target="_blank" rel="noopener noreferrer">Newsletter</a><a href="https://www.taniarascia.com/rss.xml">RSS</a><a href="https://ko-fi.com/taniarascia" target="_blank" rel="noopener noreferrer">Donate</a><a href="https://patreon.com/taniarascia" target="_blank" rel="noopener noreferrer">Patreon</a></nav><nav class="flex justify-center"><a href="https://www.gatsbyjs.org/" title="Built with Gatsby" target="_blank" rel="noopener noreferrer" class="img"><img src="./Command Line Tutorial_ Usage in Linux and macOS _ Tania Rascia_files/gatsby-024b9e2d9a40f1a7d3905503a348e2ca.png" class="footer-img" alt="Gatsby"></a><a href="https://github.com/taniarascia" title="Open-source on GitHub" target="_blank" rel="noopener noreferrer" class="img"><img src="./Command Line Tutorial_ Usage in Linux and macOS _ Tania Rascia_files/github-121bd99bb28198cc9afa35858a4fe346.png" class="footer-img" alt="GitHub"></a><a href="https://www.netlify.com/" title="Hosted by Netlify" target="_blank" rel="noopener noreferrer" class="img"><img src="./Command Line Tutorial_ Usage in Linux and macOS _ Tania Rascia_files/netlify-33bca343cbbd80d8da58eae4d7adc926.png" class="footer-img" alt="Netlify"></a></nav></section></footer></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/how-to-use-the-command-line-for-apple-macos-and-linux/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-51fd497096c9caabcd17.js"],"app":["/app-87f35bf87424d12e9648.js"],"component---src-pages-404-js":["/component---src-pages-404-js-718bc00b7b93f1fdff54.js"],"component---src-pages-blog-js":["/component---src-pages-blog-js-aeaa7c4b5f906f913b20.js"],"component---src-pages-guides-js":["/component---src-pages-guides-js-dfe5550dad815091ab6a.js"],"component---src-pages-index-js":["/component---src-pages-index-js-286b22f2c2c5d27fb64b.js"],"component---src-pages-projects-js":["/component---src-pages-projects-js-23a02253cb4f3416dba5.js"],"component---src-templates-category-js":["/component---src-templates-category-js-07112e368dbb611eccfd.js"],"component---src-templates-page-js":["/component---src-templates-page-js-660a76282083f8675253.js"],"component---src-templates-post-js":["/component---src-templates-post-js-a31070cfdf2c2607b553.js"],"component---src-templates-tag-js":["/component---src-templates-tag-js-d5a91b557ad9abd3ecce.js"]};/*]]>*/</script><script src="./Command Line Tutorial_ Usage in Linux and macOS _ Tania Rascia_files/polyfill-51fd497096c9caabcd17.js" nomodule=""></script><script src="./Command Line Tutorial_ Usage in Linux and macOS _ Tania Rascia_files/component---src-templates-post-js-a31070cfdf2c2607b553.js" async=""></script><script src="./Command Line Tutorial_ Usage in Linux and macOS _ Tania Rascia_files/432de67971864e70b73378552aca03e23c7c10bb-a5a006ba84a5412cbccf.js" async=""></script><script src="./Command Line Tutorial_ Usage in Linux and macOS _ Tania Rascia_files/commons-edafb78d32069c00edd1.js" async=""></script><script src="./Command Line Tutorial_ Usage in Linux and macOS _ Tania Rascia_files/app-87f35bf87424d12e9648.js" async=""></script><script src="./Command Line Tutorial_ Usage in Linux and macOS _ Tania Rascia_files/framework-0049b5a9acaf4f12ebf6.js" async=""></script><script src="./Command Line Tutorial_ Usage in Linux and macOS _ Tania Rascia_files/webpack-runtime-d90fc89dfff38d5744a7.js" async=""></script></body></html>
