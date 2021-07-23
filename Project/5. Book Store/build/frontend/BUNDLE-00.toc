@@ -1,0 +1,4 @@
+([('frontend',
+   '/Users/henrylin/Desktop/COMPUTING/Python/Project/5. Book '
+   'Store/dist/frontend',
+   'EXECUTABLE')],)
