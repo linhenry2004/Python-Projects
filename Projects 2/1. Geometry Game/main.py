@@ -1,17 +1,10 @@
-import turtle
-
-myturtle = turtle.Turtle()
-
-myturtle.penup()
-myturtle.goto(50, 75)
-myturtle.pendown()
-
-myturtle.forward(100)
-myturtle.left(90)
-myturtle.forward(200)
-myturtle.left(90)
-myturtle.forward(100)
-myturtle.left(90)
-myturtle.forward(200)
-
-turtle.done()
+from turtle import *
+color('red', 'yellow')
+begin_fill()
+while True:
+    forward(200)
+    right(170)
+    if abs(pos()) < 1:
+        break
+end_fill()
+done()
